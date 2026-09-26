@@ -1,0 +1,10 @@
+Code,Discipline,GoverningBody,GLOBAL_REACH,GENDER_PARITY,YOUTH_APPEAL,INFRA_COST,BROADCAST_VAL,source_global_reach,source_notes
+ATH,Athletics,World Athletics,214,50,6,8,9,https://worldathletics.org,"World Athletics member federations (~214). Gender share ~50 percent under Paris 2024 parity. Saaty: flagship broadcast; stadium cost high."
+SWM,Swimming,World Aquatics,209,50,6,8,8,https://www.worldaquatics.com,"World Aquatics member federations (~209). Olympic swimming gender-balanced. High aquatics-venue cost."
+SKB,Skateboarding,World Skate,116,50,9,3,6,https://www.worldskate.org,"World Skate national federations compiled from public IF listings (~100+; 116 recorded). Youth urban sport; park/street cheaper than a stadium."
+SRF,Surfing,ISA,103,50,8,4,6,https://www.isasurf.org,"ISA member nations (~100+). Ocean or wave venue lighter than a full stadium."
+BKG,Breaking,WDSF,96,50,9,2,5,https://www.worlddancesport.org,"WDSF members (~90+). Paris 2024: one mens and one womens breaking event. Minimal dedicated venue."
+KTE,Karate,WKF,198,50,6,3,4,https://www.wkf.net,"WKF members (~198). Tokyo 2020: eight medal events gender-balanced. Combat hall not a new stadium."
+CKT,Cricket,ICC,108,42,5,7,8,https://www.icc-cricket.com,"ICC Full plus Associate members (108). Womens professional footprint still below mens (42 percent proxy). High outfield cost; strong Subcontinent TV."
+SQU,Squash,WSF,122,50,5,4,3,https://www.worldsquash.org,"WSF members (~120+). Typically paired mens/womens draws. Indoor courts; limited global TV."
+AFB,Flag football,IFAF,73,48,8,5,7,https://www.americanfootball.sport,"IFAF member nations (~70+). LA28 lists mens and womens flag football. US broadcast pull; overlay on existing pitches."

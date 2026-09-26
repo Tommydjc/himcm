@@ -1,0 +1,98 @@
+% One-page Summary Sheet. Numbers only from ../results/*.csv.
+% Compile: pdflatex summary_sheet.tex
+% Draft placeholders (2.8 m, 214 plants, 38.6% cover, 84.5% pollination,
+% 68.2% seed cut) do not appear in the locked tables and are not used.
+\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2023 Problem A --- Summary Sheet}\\[0.25em]
+{\small Team GoHiMCM \quad sources: \texttt{monthly\_metrics.csv},
+\texttt{monthly\_population\_metrics.csv},
+\texttt{kpp\_check.csv},
+\texttt{impact\_factors.csv},
+\texttt{bioeconomic\_pareto.csv},
+\texttt{bioeconomic\_tradeoff.csv},
+\texttt{rl\_policy\_evaluation.csv}}
+\end{center}
+\vspace{0.4em}
+
+\noindent\textbf{What we built.}
+A vectorized pappus kernel (Gaussian near field + WALD tail) is convolved
+on a $100\times 100$ m lawn. Weekly west-edge Lefkovitch answers official
+Req~1. A daily center-plant CA is a second geometry---never averaged into
+the weekly cover. Fisher--KPP supplies $c^{\ast}=2\sqrt{rD}$ with
+$D=M_2/(4\tau)$. Official Req~2 is a three-species SAW. Mowing Pareto and
+the HOA letter are course pages.
+
+\medskip
+\noindent\textbf{Req 1 --- weekly, one plant west of the fence
+(\texttt{monthly\_metrics.csv}).}
+Temperate months $1,2,3$: cover $0$, $n_{\mathrm{plants}}=0$, front $0$ m
+(no recruits until April).
+Month $4$: first plants, $n_{\mathrm{plants}}=90.03$, front $6.5$ m,
+$223.5$ seeds produced that month---not ``$214$ flowering adults in month $3$.''
+Month $6$: cover $0.0328$, front $13.5$ m, one lobe, not a multi-core field.
+Month $12$: cover $\mathbf{0.4511}$ ($45.11\%$),
+$n_{\mathrm{plants}}=4.414\times 10^{5}$, $n_{\mathrm{adult}}=4674$,
+front $99.5$ m.
+Arid month $12$: cover $0.0065$. Tropical: cover $0.0232$, front $10.5$ m.
+Drought $\smi\times 0.5$: cover $0.2046$.
+
+\medskip
+\noindent\textbf{Companion daily CA, one adult at $(50,50)$
+(\texttt{monthly\_population\_metrics.csv}).}
+Day $30$: still the founding adult ($n_{\mathrm{adult}}=0.942$),
+$R_{95}=0$ m, cover $0.01\%$---no new generation.
+Day $60$: $R_{95}=5.02$ m.
+Day $90$: $n_{\mathrm{plants}}=21.32$, $R_{95}=7.01$ m, adults $\approx 1$.
+Day $180$: cover $34.73\%$, $R_{95}=46.12$ m.
+Day $365$: cover $\mathbf{100\%}$, $R_{95}=60$ m.
+This $100\%$ is not the weekly $45.11\%$.
+
+\medskip
+\noindent\textbf{Fisher--KPP.}
+Weekly: $c^{\ast}=3.5458$ m/wk, $c_{\mathrm{num}}=3.3611$ m/wk,
+rel.\ err.\ $0.0521$ (\texttt{kpp\_check.csv}).
+Daily: $c^{\ast}=1.5608$ m/d, $c_{\mathrm{num}}=0.3572$ m/d on days
+$146$--$175$, rel.\ err.\ $0.771$ (bounded, seasonal CA;
+\texttt{daily\_kpp\_check.csv}).
+Neither 12-month radius is $52c^{\ast}$ or $365c^{\ast}$.
+
+\medskip
+\noindent\textbf{Req 2 --- impact
+(\texttt{impact\_factors.csv}).}
+On \{kudzu, knotweed, dandelion\} only:
+$I_{\mathrm{PUMON}}=0.9333$, $I_{\mathrm{REJAP}}=0.5700$,
+$I_{\mathrm{TAROF}}=0.1512$ from weekly cover $0.4511$.
+Smallest $I$ in this table is not ``ecologically harmless.''
+
+\medskip
+\noindent\textbf{Control (course).}
+Weekly Pareto (\texttt{bioeconomic\_pareto.csv}): never-mow $(0.4511,C=0)$;
+biweekly $\eta=1$ $(0.0064,C=39)$ on the front; weekly $\eta=1$
+$(0.0064,C=78)$ dominated.
+Daily PRISMS (\texttt{bioeconomic\_tradeoff.csv}):
+pollinator score $0.518$ versus wild $1.000$ ($\mathbf{51.8\%}$ retained,
+not $84.5\%$);
+year-end plants $2.640\times 10^{6}$ versus $2.762\times 10^{6}$
+($\mathbf{4.4\%}$ fewer, not a $68.2\%$ seed cut);
+year-end cover still $100\%$.
+One spring window keeps bees; it does not replace the biweekly rule after
+seed-set.
+
+\medskip
+\noindent\textbf{PPO (course, \texttt{rl\_policy\_evaluation.csv}).}
+220 episodes, best return $-130.61$.
+Greedy policy is 365 days of \texttt{NO\_OP} (Figure in
+\texttt{fig\_rl\_action\_timeline.png}), net $-130.09$, same as rewild,
+pollination $41.49$.
+14-day mowing: pollination $30.28$ ($73.0\%$ of that bee score), net $-203.29$.
+Not $88.2\%$ pollen and not $6.8\%$ occupy---those cells are absent from the
+CSV. Tidy occupy $0.0064$ is weekly biweekly $\eta=1$, not PPO.
+
+\end{document}

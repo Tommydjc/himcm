@@ -1,0 +1,48 @@
+% One-page HOA coexistence note (course extension; not an official 2023 A page).
+\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\signature{GoHiMCM 2023 A study team}
+\address{Modeling desk\\GoHiMCM}
+
+\begin{document}
+\begin{letter}{Homeowners Association Board\\One-Hectare Common Lawn}
+
+\opening{Dear Board Members,}
+
+You asked what happens if one puffball-stage dandelion sits just outside the
+west fence of the common hectare, and what a sane mowing rule looks like.
+We simulated a year of wind, temperature, and soil moisture as a
+\emph{temperate lawn scenario} (not a weather-station download). Occupied
+lawn---cells with at least $0.05$ plants per square meter---is about
+$0.21$ of the hectare by month 12 if nobody mows
+(\texttt{results/monthly\_metrics.csv}). That is a patch growing in from the
+west, not a uniform yellow carpet. Most of the head-count is seedlings;
+flowering adults at year-end are a few thousand, not a million.
+
+Water stress matters. Cutting the soil-moisture index in half (a drought
+scenario) lowers month-12 occupancy to about $0.12$.
+A hotter, drier climate in our arid table ends the year near $0.027$.
+A tropical table with wind blowing \emph{away} from the lawn barely
+invades ($0.006$ occupancy), because seeds leave the property.
+
+If the goal is a tidy lawn rather than eradication of a useful edible plant,
+you do not need weekly scalping. On our cost--occupancy curve
+(\texttt{results/bioeconomic\_pareto.csv}), mowing every two weeks at full
+height reduction reaches about $0.008$ occupancy at relative cost $39$.
+Mowing every week costs twice as much for the same occupancy and is wasted
+effort. Leaving the stand and harvesting greens is consistent with the
+low impact score dandelion receives against kudzu and Japanese knotweed
+in our three-species comparison: those two are the board's real ``do not
+plant / do not ignore'' species if they appear on the edges of the
+development.
+
+We recommend: (1)~keep a two-week mowing cadence through the spring and fall
+bloom windows; (2)~do not spray the whole hectare for one west-edge patch;
+(3)~revisit the rule after a drought summer, when natural cover is already
+lower.
+
+\closing{Respectfully,}
+\end{letter}
+\end{document}

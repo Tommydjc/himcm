@@ -1,0 +1,123 @@
+% Course extension (not an official 2023 A scored page).
+% Numbers from ../results/bioeconomic_pareto.csv,
+% bioeconomic_tradeoff.csv, monthly_metrics.csv, impact_factors.csv.
+% Compile: pdflatex hoa_community_statement.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\pagestyle{empty}
+\setstretch{1.08}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Rethinking the Yellow Bloom:}\\[0.25em]
+{\large A Science-Based Coexistence Guide for Sustainable Turf Management}\\[0.6em]
+{\small Homeowners Association / Parks Department briefing
+\quad GoHiMCM 2023~A study team}
+\end{center}
+
+\vspace{0.6em}
+\noindent
+Dear Board and Parks staff,
+
+The yellow week in April is not a failure of the crew.
+It is the first bloom of a plant that, on our temperate weekly simulation
+of \textbf{one puffball just west of a one-hectare common}, occupies
+$\mathbf{45.11\%}$ of cells by December if nobody mows
+(\texttt{monthly\_metrics.csv}).
+That is a west-in patch with $4674$ flowering adults and a much larger
+seedling count---not a uniform carpet, and not the daily classroom CA
+that starts a plant in the dead center and fills $100\%$ of the grid.
+
+Against kudzu and Japanese knotweed, scored on the same six-leaf sheet,
+dandelion's impact is $0.151$ versus $0.933$ and $0.570$
+(\texttt{impact\_factors.csv}).
+That ranking is only inside those three rows.
+It is a reason to stop panic-spraying the whole common for one fence-line
+patch. It is not a reason to ignore seed rain.
+
+\section*{The two-zone, two-phase rule}
+
+Do not run one calendar on every square meter.
+
+\paragraph{Zone A --- early-spring bee verge.}
+Mark a strip along the west fence (and any already-yellow median)
+as a \emph{pollinator verge} from March through the first two weeks of
+open bloom.
+Leave those heads standing.
+In our daily window model the first real bloom is April;
+keeping about fourteen days of flowers is the entire pollinator term
+$B_{\mathrm{pollinator}}$.
+
+\paragraph{Zone B --- show turf.}
+Play fields, front walks, and HOA photo lawns stay on a height rule,
+not a herbicide calendar.
+
+\paragraph{Phase 1 --- keep the bloom.}
+For Zone~A, the two weeks before and into first bloom are a no-cut
+window. That is the ``retain for bees'' half of Strategy~4.
+
+\paragraph{Phase 2 --- cut 72 hours before seed fly.}
+When the florets close and the pappus clock starts, cut Zone~A once,
+low deck, about \textbf{three days (72 hours) before the seed heads open}.
+In the model that is a single spring cut after $\approx 11$ days of open
+flower. It is cheap: one mechanical pass, not ten 2,4-D rounds.
+
+\section*{What the numbers actually say}
+
+The spring window is not a silver bullet.
+On the daily CA, Strategy~4 keeps $\mathbf{51.8\%}$ of the wild
+early-spring pollinator score (not $84.5\%$) and only
+$\mathbf{4.4\%}$ fewer year-end plants than doing nothing
+(\texttt{bioeconomic\_tradeoff.csv}).
+Autumn bloom refills the hectare: year-end cover is still $100\%$
+in that geometry.
+So Phase~2 must be followed by a \emph{turf rule} on Zone~B.
+
+On the weekly cost--cover front
+(\texttt{bioeconomic\_pareto.csv}),
+mowing every two weeks at full height reduction reaches cover
+$\mathbf{0.0064}$ at relative cost $39$.
+Mowing every week costs $78$ for the same cover---wasted labor.
+Never-mow is cover $0.4511$ at cost $0$.
+If the Board wants bees \emph{and} a tidy photo lawn:
+keep Zone~A through Phase~1--2, then put Zone~B on the biweekly cadence
+for the rest of bloom season (including September--October).
+Do not spray the hectare because one verge went yellow.
+
+This is the \emph{temperature--bloom dual-response} card we distilled from
+the PPO run (\texttt{rl\_policy\_evaluation.csv}): the network's greedy
+year is ``do nothing'' (net $-130$, same as rewilding; 14-day scalping
+nets $-203$).
+So the letter is not ``the neural net mows at 6.8\% cover.''
+It is: \textbf{when air is still in the March--April bloom, do not cut
+Zone~A}; \textbf{when you need a photo lawn after seed-set, use the
+biweekly rule}, not weekly poison.
+
+Drought already cuts weekly month-12 cover from $0.4511$ to $0.2046$.
+After a dry summer, revisit the cadence before adding chemistry.
+
+\section*{What we are asking you to print}
+
+\begin{enumerate}
+  \item Stake Zone~A in March. No cut until Phase~2.
+  \item One low-deck cut on Zone~A 72 hours before seed fly.
+  \item Zone~B: biweekly mow through spring and fall bloom; skip weekly
+        scalping.
+  \item Herbicide only on documented knotweed or kudzu, not on
+        \emph{Taraxacum}.
+\end{enumerate}
+
+\vspace{1.2em}
+\noindent
+Respectfully,\\[0.6em]
+GoHiMCM 2023~A study team\\
+{\small Sources: \texttt{results/monthly\_metrics.csv},
+\texttt{bioeconomic\_pareto.csv},
+\texttt{bioeconomic\_tradeoff.csv},
+\texttt{impact\_factors.csv},
+\texttt{rl\_policy\_evaluation.csv}.}
+
+\end{document}

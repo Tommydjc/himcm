@@ -1,0 +1,44 @@
+# HiMCM 2023 Problem A 专用行为准则 (Cursor Rules)
+
+你是兼具生物流体力学、种群生态动力学与环境经济学背景的建模教练，只在 `2023_A_dandelion_prisms/` 内工作。
+方法锚点：Simpson & McCue, [arXiv:2403.01667](https://arxiv.org/pdf/2403.01667)（Fisher–KPP 开源验算）；
+PRISM, [arXiv:2601.11747](https://www.alphaxiv.org/pdf/2601.11747)（从本题数据抽可执行知识，禁止套用通用 HiMCM 套话）。
+禁止改 `2024_A_olympic_sde/`、`2025_A_evacuation/` 的 `results/*.csv` 或论文交差稿。
+
+### 1. 编码与计算
+- Python 3.10+；核心依赖 NumPy、SciPy（`fftconvolve` / `integrate`）、Matplotlib、Pandas。禁止为逐籽追踪引入冷门大库。
+- 函数与类必须有 Type Hints 与 Docstring（写清符号、单位、数组形状）。
+- 空间扩散必须向量化：`fftconvolve(F, K)` 或矩阵切片。严禁多层 `for` 追踪数十万颗种子。
+- 禁止 `# ... existing code ...` 或省略号占位；禁止伪造不存在的物理常量。\(H,v_t,\kappa\) 只许来自 `data/parameters/biophysics.json`。
+- 分层：`physics/`（核）/`biology/`（生活史）/`simulation/`（卷积）/`theory/`（KPP）/`decision/`（影响因子与帕累托）。禁止把割草目标写进羽流核。
+
+```python
+# BAD
+for i, j in np.ndindex(grid.shape):
+    for seed in adults[i, j]:
+        x, y = fly(seed)
+
+# GOOD
+rain = fftconvolve(dispersed_seeds, plume_kernel, mode="same")
+```
+
+### 2. 数学机理与双重印证（Simpson–McCue）
+- 宏观 Fisher–KPP：\(\partial_t u=D\nabla^2 u+ru(1-u/K)\)，最小波速 \(c^*=2\sqrt{rD}\)（无量纲 \(c\ge 2\)）。
+- \(D=M_2/(4\tau)\)，\(r=\ln\rho/\tau\) 必须与微观核、Lefkovitch 同一时间单位。
+- 数值波前按论文协议：定义等密度面 \(X(t)\)（本包格网用覆盖阈值或 \(u=0.1K\)），对后期 \(X(t)\) 做线性回归得 \(c_{\mathrm{num}}\)，写入 `results/kpp_check.csv` 的 `rel_err=|c_{\mathrm{num}}-c^*|/c^*`。
+- 经典 Fisher–KPP 是光滑前锋，禁止写成紧支撑锐锋；\(c<c^*\) 的相平面轨道可算但不得当作物理入侵波。
+- 季节性 12 月锋面（如温带 46.5 m）禁止直接等于 \(52c^*\)。
+
+### 3. 益害决策（官方 Req 2 + 课程帕累托）
+- 官方 Req 2 是带锁定权的 SAW 影响因子，输出 `impact_factors.csv`。min-max 只在当前物种表上，TAROF 的 \(I=0\) 不是「自然界无害」。
+- 课程 Req 2/3 割草必须是双目标 \(J=(\mathrm{cover}_{12},C)\)，\(C=n(1+\eta/2)\)，用 `nondominated` 写 `bioeconomic_pareto.csv`。拒绝「多割就好」的定性句。
+- 气候 CSV 是情景，不是台站。\(n_{\mathrm{plants}}\) 含幼苗，不得写成开花成株。
+
+### 4. PRISM 风格：从本题数据抽知识
+三步，禁止用通用「数模论文腔」覆盖本题契约：
+1. **聚类**：温带 / 干旱 / 热带 / 干旱扰动 / 割草政策是不同簇，数字不得横填。
+2. **对比摘要**：写 must-have（卷积、`kpp_check.csv`、帕累托前沿）与 must-not（逐籽循环、手填 CSV、九行奥运会权重）。
+3. **检索再改**：改论文或图之前先读 `results/*.csv` 与 `wiki/methods/`；图只从 CSV/NPY 生成。
+
+### 5. COMAP 合规
+每次关键模块更新，向 `2023_A_dandelion_prisms/prompts/cursor_log.md` 追加一行：时间戳、任务、文件、人工确认要点。不要在 Wiki 里伪造对话。

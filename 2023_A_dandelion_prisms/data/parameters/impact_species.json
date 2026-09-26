@@ -1,0 +1,52 @@
+{
+  "note": "Locked 1-9 attributes for official Req 2 SAW. Not government scores. Utility is cost-sense (higher utility lowers impact).",
+  "weights": {
+    "spread": 0.25,
+    "competition": 0.20,
+    "economic": 0.20,
+    "health": 0.10,
+    "ecology": 0.15,
+    "utility": 0.10
+  },
+  "species": [
+    {
+      "code": "TAROF",
+      "name": "Taraxacum officinale",
+      "region": "North American suburban lawns and pastures",
+      "spread_manual": 6.0,
+      "use_model_spread": true,
+      "competition": 5.0,
+      "economic": 5.0,
+      "health": 2.0,
+      "ecology": 4.0,
+      "utility": 8.0,
+      "source": "Edible/medicinal use vs turf competition; spread overwritten by temperate 12-month cover."
+    },
+    {
+      "code": "PUMON",
+      "name": "Pueraria montana (kudzu)",
+      "region": "Southeastern United States",
+      "spread_manual": 9.0,
+      "use_model_spread": false,
+      "competition": 9.0,
+      "economic": 8.0,
+      "health": 3.0,
+      "ecology": 9.0,
+      "utility": 3.0,
+      "source": "USDA NISIC / classic kudzu canopy smothering in SE US."
+    },
+    {
+      "code": "REJAP",
+      "name": "Reynoutria japonica (Japanese knotweed)",
+      "region": "United Kingdom and northeastern US riparian corridors",
+      "spread_manual": 8.0,
+      "use_model_spread": false,
+      "competition": 8.0,
+      "economic": 9.0,
+      "health": 2.0,
+      "ecology": 8.0,
+      "utility": 2.0,
+      "source": "Structural/riparian damage literature; not a lawn WALD run."
+    }
+  ]
+}

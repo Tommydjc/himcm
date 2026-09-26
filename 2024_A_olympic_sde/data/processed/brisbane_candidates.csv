@@ -1,0 +1,4 @@
+Code,Sport,Discipline,GoverningBody,Appearances,Events_Count,Events_Year,Cohort,historical_status,GLOBAL_REACH,GENDER_PARITY,YOUTH_APPEAL,INFRA_COST,BROADCAST_VAL,HOST_POPULARITY
+CKT,Cricket,Cricket,ICC,2,2.0,2028,candidate_2032,candidate_2032,108.0,45.0,8.0,5.5,9.5,9.8
+SQU,Squash,Squash,WSF,1,2.0,2028,candidate_2032,candidate_2032,150.0,48.0,6.5,3.0,6.0,7.5
+AFB,Flag football,Flag football,IFAF,1,2.0,2028,candidate_2032,candidate_2032,75.0,50.0,8.5,3.5,7.5,6.5
