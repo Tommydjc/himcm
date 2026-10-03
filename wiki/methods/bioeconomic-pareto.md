@@ -5,19 +5,19 @@
 ```yaml
 type: method
 year: 2023
-status: draft
+status: ingested
 sources:
   - 2023_A_dandelion_prisms/src/decision/pareto.py
   - 2023_A_dandelion_prisms/results/bioeconomic_pareto.csv
 ```
 
-## 要点
+## 要点（现行 CSV）
 
-- 不割：覆盖 0.2097，成本 0，在前沿上。
-- 双周 \(\eta=1\)：覆盖 0.0077，成本 39，在前沿上。
-- 每周 \(\eta=1\)：覆盖同为 0.0077，成本 78，被支配。
+- 不割：覆盖 **0.4511**，成本 0，在前沿上。
+- 双周 \(\eta=1\)：覆盖 **0.0064**，成本 39，在前沿上。
+- 每周 \(\eta=1\)：覆盖同为 0.0064，成本 78，被支配。
 
-课程扩展，不是官方 Req 2。官方 Req 2 是影响因子 SAW。
+课程扩展，不是官方 Req 2。官方 Req 2 是影响因子 SAW。日步四策略见 `bioeconomic_tradeoff.csv`。
 
 ## Related
 

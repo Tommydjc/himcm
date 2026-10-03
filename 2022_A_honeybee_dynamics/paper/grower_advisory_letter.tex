@@ -1,0 +1,133 @@
+% HiMCM 2022 Problem A --- Non-technical grower / beekeeper letter (~1.5 pp)
+% Compile: pdflatex grower_advisory_letter.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\onehalfspacing
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Maximizing Orchard Yield and Apiary Sustainability:}\\[0.25em]
+{\Large\bfseries A Data-Driven Guide for Commercial Pollination}\\[0.6em]
+{\normalsize Prepared for commercial beekeeping associations and almond
+growers}\\[0.2em]
+{\small HiMCM 2022 Problem A \quad Team XXXX \quad (plain-language brief)}
+\end{center}
+
+\vspace{0.6em}
+\noindent
+Dear Association Members and Orchard Partners,
+
+This short guide translates our colony and orchard model into field
+practice. It is written for people who move bees and sign pollination
+contracts---not for mathematicians. The numbers below come from our
+simulation files for a \textbf{20-acre almond block}
+(\(\approx 81{,}000\,\mathrm{m}^2\)).
+
+\subsection*{1. How many hives? The golden band}
+On a 20-acre almond orchard, plan on \textbf{1 to 2 hives per acre}, that
+is \textbf{20 to 40 strong colonies} for the whole block. In our
+optimization, \textbf{40 colonies} (2 per acre) gave the best balance of
+nut set and rental cost at about \textbf{85\% of full pollination
+potential} and roughly \textbf{\$51{,}000} net orchard return after a
+\$200/hive rental. Pushing past about 2.5 hives/acre barely raises set
+but starts to starve colonies of nectar and pollen (shared bloom), so
+bees leave the contract weaker.
+
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Light bloom / small trees:} start near 1 hive/acre (20
+        colonies).
+  \item \textbf{Full bloom / mature block:} target 1.5--2 hives/acre
+        (30--40 colonies).
+  \item \textbf{Avoid:} stacking 3+ hives/acre as a default ``insurance''
+        load without checking stores after petal fall.
+\end{itemize}
+
+\subsection*{2. Fan (sector) placement on the block}
+Scatter colonies so flight paths cover the canopy instead of fighting
+over the same fence line.
+
+\begin{enumerate}[leftmargin=1.2em]
+  \item Divide the 20 acres into \textbf{4--6 sectors} (roughly
+        3--5 acres each).
+  \item Place \textbf{groups of 4--8 pallets} near sector centers or
+        along alleyways with truck access---not one giant wall of hives
+        on a single edge.
+  \item Face entrances \textbf{southeast} where wind and morning sun
+        allow; keep \textbf{8--12 ft} between pallet groups when space
+        allows.
+  \item Keep a \textbf{water source} within a short flight; muddy
+        puddles beat none at all during dry bloom weeks.
+  \item Record GPS/pallet IDs so weak colonies can be swapped without
+        reshuffling the whole yard.
+\end{enumerate}
+
+\subsection*{3. Feeding through bloom}
+Almond bloom is early and can be cold. Even with orchard nectar, packages
+often need help.
+
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Before move-in:} colonies should be queenright, with
+        sealed brood and enough honey that frames are not light when
+        tipped.
+  \item \textbf{During cool bloom (\(<55^\circ\mathrm{F}\) flight days):}
+        offer \textbf{1:1 sugar syrup} in hive-top feeders and a
+        \textbf{pollen substitute patty} if pollen traps/frames look
+        thin.
+  \item \textbf{Stop heavy syrup} once consistent flight and orchard
+        nectar flow are obvious---you want bees on flowers, not on
+        feeders.
+  \item \textbf{After petal fall:} inspect stores before the next
+        contract; our model treats post-bloom nectar and brood survival
+        as the hive-health score you feel as ``spring build-up.''
+\end{itemize}
+
+\subsection*{4. Varroa: the critical control that protects foragers}
+Our stress tests show that when mites, spray exposure, and cold snaps
+stack, colonies tip from a safe winter store zone into collapse as
+\textbf{effective forager death} rises. You do not need the equations;
+you need thresholds you can act on.
+
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Monitor:} alcohol wash or sticky board \textbf{before}
+        almond staging and again after the contract.
+  \item \textbf{Treat on the calendar that matches your region}, but do
+        not enter pollination with high mite loads. As a practical
+        trigger used by many commercial yards: act when washes approach
+        the \textbf{high single digits per 300 bees} (follow your
+        association's current economic threshold---treat \emph{before}
+        the contract if you are already close).
+  \item \textbf{Rotate modes of action}; never rely on a single chemical
+        year after year.
+  \item \textbf{Coordinate with the grower} on fungicide/insecticide
+        timing. Night sprays and avoiding open-bloom insecticides
+        protect the foragers your rent is paying for.
+\end{itemize}
+
+\subsection*{5. Shared checklist (grower + beekeeper)}
+\begin{enumerate}[leftmargin=1.2em]
+  \item Contract states hive count in the \textbf{20--40} band for 20
+        acres, colony strength standard, and payment timing.
+  \item Map shows \textbf{sector/fan placement} and water.
+  \item Spray schedule shared \textbf{72 hours} ahead when possible.
+  \item Post-bloom: store check + mite check before the next move.
+\end{enumerate}
+
+\vspace{0.4em}
+\noindent
+Healthy bees and full almond sets are the same project. Stock the golden
+band, place colonies so they cover the canopy, feed only when weather
+steals flight, and keep Varroa from quietly raising forager death during
+the most valuable weeks of the year.
+
+\vspace{0.8em}
+\noindent
+Respectfully,\\[0.6em]
+Team XXXX\\
+HiMCM 2022 Problem A Modeling Group
+
+\end{document}

@@ -1,23 +1,27 @@
 # 2023 A 失败模式
 
-情景气候、幼苗计数、三行影响宇宙、离岸风是本题最容易写错的四处。
+情景气候、两套几何、三行影响宇宙与把 RL 写成主结论是本题最容易写错的几处。
 
 ```yaml
 type: concept
 year: 2023
-status: draft
+status: ingested
 sources:
+  - 2023_A_dandelion_prisms/prompts/cursor_log.md
   - 2023_A_dandelion_prisms/results/monthly_metrics.csv
   - 2023_A_dandelion_prisms/results/impact_factors.csv
+  - 2023_A_dandelion_prisms/results/monthly_population_metrics.csv
   - 2023_A_dandelion_prisms/data/raw/weather/README.md
 ```
 
-## 四条
+## 六条
 
-1. **气候 CSV 不是观测**。`data/raw/weather/` 由月契约展开。
-2. **\(n_{\mathrm{plants}}\) 含幼苗**。温带 12 月约 \(1.45\times 10^6\) 株，成株约 3444。
-3. **TAROF 影响因子 0 只在三行宇宙**。换对照集必须重算 min-max。
-4. **热带锋面 3.5 m 是离岸风 + 西缘滞留**，不是「热带不长蒲公英」。
+1. **气候 CSV 默认不是台站观测**。情景 `*_hourly.csv` / `*_smi.csv` 与 Open-Meteo 日表分轨。
+2. **\(n_{\mathrm{plants}}\) 含幼苗**。温带 12 月约 \(4.41\times 10^5\) 株，成株约 4674。
+3. **TAROF impact≈0.151 只在三行宇宙**；旧稿「TAROF=0」已过期，勿回写。
+4. **周步 cover 0.4511 ≠ 日步 100%**。西缘周卷积与中心日步是两套几何。
+5. **热带锋面短是离岸风 + 边界滞留**，不是「热带不长」。
+6. **PPO 评测表不是官方 Req**；`rl_policy_evaluation.csv` 显示 learned PPO 与 rewilding 同轨时，不得写成「已击败全部田间策略」。
 
 ## Related
 

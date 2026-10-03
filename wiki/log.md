@@ -10,6 +10,12 @@ sources:
   - AGENTS.md
 ```
 
+## [2026-10-03] ingest | 2022 A + 2023 A study close-out
+
+只读 `2022_A_honeybee_dynamics/` 与 `2023_A_dandelion_prisms/` Raw，新建 2022 problem/methods/sources/playbooks/concepts，并按现行 CSV 刷新 2023 过期数字（温带 cover **0.4511**、TAROF **0.1512**、REJAP **0.5700**）。刷新 `wiki/index.md`、`synthesis.md`、`comparisons/evaluation-vs-simulation.md`、`STUDIES.md`。未改任一年 `results/*.csv` 或 `src/`。status=`ingested`（非 contest-ready）。
+
+核对保留（2022）：健康峰 66507 / 越冬 38622；\(J_{pop}\) 弹性 \(+0.925/-0.311/+0.294\)；CCD 软 0.11 / 硬 0.305；果园 \(K^\star=40\)、YieldRatio 0.848。核对保留（2023）：温带 12 月 cover 0.4511、front 99.5；KPP rel_err 0.0521；双周 \(\eta=1\) cover 0.0064 成本 39。
+
 ## [2026-09-26] rule | 2023 A .cursorrules from Simpson–McCue + PRISM
 
 写入 `2023_A_dandelion_prisms/.cursorrules` 与 `.cursor/rules/2023-a-*.mdc`。锚点 arXiv:2403.01667（KPP 波前协议）与 arXiv:2601.11747（从本题 CSV 抽知识）。未改权威 CSV。
@@ -29,4 +35,6 @@ sources:
 ## Related
 
 - [目录](index.md)
+- [2022 问题](problems/2022-a-honeybee-dynamics.md)
+- [2023 问题](problems/2023-a-dandelion-prisms.md)
 - [2024 问题](problems/2024-a-olympic-sde.md)

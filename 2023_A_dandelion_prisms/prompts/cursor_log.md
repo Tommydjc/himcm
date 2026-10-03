@@ -22,3 +22,4 @@
 | 2026-09-26 | 重写论文套件与 HOA 指南信 | `paper/himcm_paper.tex`；`paper/summary_sheet.tex`；`paper/hoa_community_statement.tex` | 数字只抄当前 CSV；拒用 2.8 m/214/38.6%/84.5%/68.2%；周步 cover 0.4511 与日步 100% 分列；未手改 `results/*.csv` |
 | 2026-09-26 | PPO 自适应割草（课程扩展） | `src/rl/env_wrapper.py`；`src/rl/ppo_agent.py`；`src/rl/train_rl.py`；`src/rl/compare_policies.py` | 复用 `step_phenology` 非虚构引擎类；10×10 缓冲带加速；早春 Action 2/3 罚 −15；写 `rl_policy_evaluation.csv`；未覆盖周步帕累托表 |
 | 2026-09-26 | 论文写入 PPO 第 4 节（真实表值） | `paper/himcm_paper.tex`；`paper/summary_sheet.tex`；`paper/hoa_community_statement.tex` | 甘特为全年 NO_OP；授粉 41.49 对 14 日 30.28；拒用 88.2%/6.8%；0.0064 标明来自周步帕累托 |
+| 2026-10-03 | 2023 研究写入 Wiki（校正过期数字 + study loop） | `wiki/problems/2023-a-dandelion-prisms.md`；sources/monthly-metrics 等 | 按现行 CSV：cover 0.4511、TAROF 0.1512；不改模型、不改权威 CSV；status=`ingested` |

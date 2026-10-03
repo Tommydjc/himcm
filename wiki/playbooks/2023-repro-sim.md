@@ -5,29 +5,37 @@
 ```yaml
 type: playbook
 year: 2023
-status: draft
+status: ingested
 sources:
   - 2023_A_dandelion_prisms/README.md
   - 2023_A_dandelion_prisms/src/scripts/run_all.py
-  - 2023_A_dandelion_prisms/results/run_summary.json
 ```
 
 ## 步骤
 
-1. `cd 2023_A_dandelion_prisms`
-2. `PYTHONPATH=. python -m src.scripts.generate_forcing`
-3. `PYTHONPATH=. python -m src.scripts.run_all`
-4. `PYTHONPATH=. python -m src.scripts.plot_figures`
-5. `python -m unittest discover -s tests -v`
+```bash
+cd 2023_A_dandelion_prisms
+PYTHONPATH=. python -m src.scripts.generate_forcing
+PYTHONPATH=. python -m src.scripts.run_all
+PYTHONPATH=. python -m src.scripts.plot_figures
+python -m unittest discover -s tests -v
+```
+
+可选 Open-Meteo 日表（不覆盖情景强迫、默认不改权威周步表）：
+
+```bash
+PYTHONPATH=. python scripts/download_real_climate.py
+```
 
 ## 验收
 
-- `results/monthly_metrics.csv` 36 行（3 气候 × 12 月）。
-- `run_summary.json`：`n_pareto_policies=22`，`impact_top=PUMON`。
-- 11 个 unittest OK。
+- `results/monthly_metrics.csv`：温带 12 月 `cover_frac=0.4511`，`front_m=99.5`。
+- `impact_factors.csv`：PUMON 0.9333 / REJAP 0.5700 / TAROF 0.1512。
+- `kpp_check.csv`：`rel_err≈0.0521`。
 - 不手改 CSV。
 
 ## Related
 
+- [研究闭环](../playbooks/2023-a-study-loop.md)
 - [2023 问题](../problems/2023-a-dandelion-prisms.md)
 - [月末指标](../sources/monthly-metrics.md)

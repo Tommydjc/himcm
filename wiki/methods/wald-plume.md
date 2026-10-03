@@ -5,7 +5,7 @@
 ```yaml
 type: method
 year: 2023
-status: draft
+status: ingested
 sources:
   - 2023_A_dandelion_prisms/src/physics/wald.py
   - 2023_A_dandelion_prisms/src/physics/plume.py

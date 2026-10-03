@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # himcm
 
 GoHiMCM studies hub for HiMCM problem packs.
@@ -11,3 +12,6 @@ GoHiMCM studies hub for HiMCM problem packs.
 | [2025_A_evacuation/](2025_A_evacuation/) | 2025 A Evacuation Sweeps |
 | [2024_A_olympic_sde/](2024_A_olympic_sde/) | 2024 A Olympic SDE |
 | [2023_A_dandelion_prisms/](2023_A_dandelion_prisms/) | 2023 A Dandelions |
+=======
+# himcm
+>>>>>>> 5499b2c9ba5f9f2459456fe2e76ad8669feec354

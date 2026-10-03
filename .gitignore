@@ -16,3 +16,11 @@ __pycache__/
 # Runtime leftovers
 *.log
 .ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.out
+*.toc

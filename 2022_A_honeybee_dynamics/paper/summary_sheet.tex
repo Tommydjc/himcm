@@ -1,0 +1,83 @@
+% HiMCM 2022 Problem A --- One-page Summary Sheet
+% Numbers ONLY from ../results/*.csv (not from illustrative drafts).
+% Compile: pdflatex summary_sheet.tex
+\documentclass[11pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2022 Problem A --- Summary Sheet}\\[0.2em]
+{\small Team XXXX \quad sources:
+\texttt{ccd\_healthy\_vs\_stress\_snapshot.csv},
+\texttt{autograd\_elasticity\_ranking.csv},
+\texttt{ccd\_tipping\_point.csv},
+\texttt{orchard\_pollination\_optimization.csv}}
+\end{center}
+\vspace{0.35em}
+
+\noindent\textbf{What we built.}
+A five-state dual-feedback DFM colony ODE
+\(y=[B,H,F,P,N]\) with \(C^\infty\) activations, unrolled in PyTorch for
+Autograd elasticities; a triple-stress CCD bifurcation in forager
+mortality \(\mu_F\); and a 20-acre almond competition--yield--rent OR
+model. All figures in \texttt{paper\_figures/} are generated from code;
+no hand-edited CSV cells.
+
+\medskip
+\noindent\textbf{Req 1 --- Colony dynamics
+(\texttt{ccd\_healthy\_vs\_stress\_snapshot.csv}).}
+Healthy baseline (\(\mu_F=0.10\)):
+\textbf{summer peak adults \(H+F=66{,}507\)} (day 238);
+\textbf{overwinter adults \(38{,}622\)}.
+Field triple stress at \(\mu_F=0.28\): summer peak \(5{,}630\),
+overwinter \(3{,}163\).
+Legacy Khoury-style series
+\texttt{colony\_annual\_dynamics.csv}: year peak adults \(27{,}546\)
+(DOY 32), winter end \(2{,}074\) (companion, not mixed into Torch peaks).
+
+\medskip
+\noindent\textbf{Req 2 --- Autograd elasticity ranking
+(\texttt{autograd\_elasticity\_ranking.csv}).}
+For \(J_{\mathrm{pop}}=H+F\) at day 365 (\(J^\star=35{,}179\)):
+\begin{enumerate}
+\item \(L_{\max}\) (laying rate): \(S=+0.925\)
+\item \(\mu_F\) (forager mortality): \(S=-0.311\)
+\item \(\sigma_F\) (social inhibition): \(S=+0.294\)
+\end{enumerate}
+For \(J_{\mathrm{nectar}}=N\) at day 270: top is
+\(\eta_N\) with \(S=+0.829\).
+
+\medskip
+\noindent\textbf{Req 3 / CCD --- Stress tipping
+(\texttt{ccd\_tipping\_point.csv}).}
+Under pesticide + Varroa + frost,
+\textbf{soft tip} \(\mu_F^{\ast,\mathrm{soft}}=0.11\) (leave Safe Zone
+\(N\ge 5000\,\mathrm{g}\));
+\textbf{hard collapse tip}
+\(\mu_F^{\ast}=0.305\,\mathrm{day}^{-1}\)
+(\(N\) crosses \(3000\,\mathrm{g}\)).
+Sweep: 6 Safe / 39 Compensatory / 20 Collapse points.
+
+\medskip
+\noindent\textbf{Req 3 --- 20-acre almond stocking
+(\texttt{orchard\_pollination\_optimization.csv}).}
+Golden band \textbf{1--2 hives/acre} \(\Leftrightarrow\)
+\textbf{\(K\in[20,40]\)} colonies on 20 acres.
+Band optimum \(K^\star=40\):
+\(\mathrm{YieldRatio}=\mathbf{0.848}\) (\(84.8\%\) of full set),
+net profit \$51{,}394, hive-health index \(0.975\).
+At \(K=35\) (1.75/acre): yield \(0.831\), net \$51{,}136.
+Overstocking to \(K=60\) keeps yield \(\approx 0.855\) but drops health
+to \(0.735\) and net to \$47{,}826.
+
+\medskip
+\noindent\textbf{Req 4 --- Grower takeaway.}
+Protect queen laying and keep effective forager death below the soft tip
+under combined stress; stock almonds in the \(20\)--\(40\) colony band;
+see \texttt{grower\_advisory\_letter.tex} for placement, feeding, and
+Varroa triggers.
+
+\end{document}

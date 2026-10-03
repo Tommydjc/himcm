@@ -5,20 +5,23 @@
 ```yaml
 type: source
 year: 2023
-status: draft
+status: ingested
 sources:
   - 2023_A_dandelion_prisms/results/monthly_metrics.csv
   - 2023_A_dandelion_prisms/results/drought_monthly.csv
 ```
 
-## 摘要
+## 摘要（baseline）
 
-温带 1/2/3/6/12 月 `cover_frac`：0.0000 / 0.0027 / 0.0052 / 0.0729 / 0.2097；12 月 `front_m=46.5`，`n_adult=3443.81`。
-干旱 12 月覆盖 0.0273、锋面 22.5 m。
-热带 12 月覆盖 0.0064、锋面 3.5 m。
-温带干旱扰动（`drought_monthly.csv`）12 月覆盖 0.1156、锋面 33.5 m。
+温带 1/2/3/6/12 月 `cover_frac`：0.0000 / 0.0000 / 0.0000 / 0.0328 / **0.4511**；12 月 `front_m=99.5`，`n_plants≈4.414\times 10^5`，`n_adult≈4674`。
 
-`n_plants` 含幼苗。覆盖阈值为 0.05 株/m²。
+干旱 12 月：`cover_frac=0.0065`，`front_m=13.5`。
+
+热带 12 月：`cover_frac=0.0232`，`front_m=10.5`。
+
+温带干旱扰动（`drought_monthly.csv`）12 月 `cover_frac=0.2046`。
+
+`n_plants` 含幼苗。日步中心宇宙见 `monthly_population_metrics.csv`（勿与本表平均）。
 
 ## Related
 

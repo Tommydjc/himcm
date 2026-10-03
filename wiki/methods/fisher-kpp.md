@@ -5,7 +5,7 @@
 ```yaml
 type: method
 year: 2023
-status: draft
+status: ingested
 sources:
   - 2023_A_dandelion_prisms/src/theory/fisher_kpp.py
   - 2023_A_dandelion_prisms/results/kpp_check.csv
@@ -24,7 +24,7 @@ c^*=2\sqrt{rD}.
 
 ## 适用条件
 
-只验常系数 PDE 与矩匹配，不把 \(52c^*\) 写成温带 12 月锋面 46.5 m。
+只验常系数 PDE 与矩匹配，不把 \(52c^*\) 写成温带 12 月锋面 99.5 m（`monthly_metrics.csv`）。
 
 ## Related
 

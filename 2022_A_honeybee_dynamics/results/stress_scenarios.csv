@@ -1,0 +1,6 @@
+scenario,n_peak,n_end,n_min,day_peak,collapsed,m_scale,brood_mort_scale,forage_scale,lay_scale,note
+baseline,27545.504083016553,2074.158177559227,2074.158177559227,32.0,0.0,1.0,1.0,1.0,1.0,no added stress
+varroa,25542.72560228727,510.7912902988028,510.7912902988028,26.0,1.0,1.5,3.5,1.0,1.0,Varroa destructor: brood and adult mortality up
+neonic,27210.46344019056,1814.629793727454,1814.629793727454,31.0,1.0,1.4,1.0,0.5,1.0,"neonicotinoid: forager death up, forage efficiency down"
+late_frost,27545.504083016553,673.2527791005252,673.2527791005252,32.0,1.0,1.0,1.0,1.0,0.7,late frost DOY 100-118: first forage window crash + laying cut
+combined,25739.617268093167,137.69474991438696,137.69474991438696,27.0,1.0,1.6,3.0,0.5,0.7,stacked CCD-like pressure

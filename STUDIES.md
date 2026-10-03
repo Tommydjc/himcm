@@ -12,7 +12,8 @@
 | --- | --- | --- | --- | --- |
 | [2025_A_evacuation/](2025_A_evacuation/) | 2025 A Evacuation Sweeps | 仿真 / 图 MDP / 规划+RL | [2025-a-evacuation](wiki/problems/2025-a-evacuation.md) | ingested |
 | [2024_A_olympic_sde/](2024_A_olympic_sde/) | 2024 A Olympic SDE | 评价 / MCDM + ML 互证 | [2024-a-olympic-sde](wiki/problems/2024-a-olympic-sde.md) | ingested |
-| [2023_A_dandelion_prisms/](2023_A_dandelion_prisms/) | 2023 A Dandelions | 机理 / 空间扩散 + 影响因子 | [2023-a-dandelion-prisms](wiki/problems/2023-a-dandelion-prisms.md) | draft |
+| [2023_A_dandelion_prisms/](2023_A_dandelion_prisms/) | 2023 A Dandelions | 机理 / 空间扩散 + 影响因子 | [2023-a-dandelion-prisms](wiki/problems/2023-a-dandelion-prisms.md) | ingested |
+| [2022_A_honeybee_dynamics/](2022_A_honeybee_dynamics/) | 2022 A Need for Bees | 动力学 / Autograd / 授粉 OR | [2022-a-honeybee-dynamics](wiki/problems/2022-a-honeybee-dynamics.md) | ingested |
 | [_template/](_template/) | — | 空壳 | — | ready |
 
 新开一年：

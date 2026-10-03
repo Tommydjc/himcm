@@ -1,0 +1,105 @@
+% HiMCM / COMAP AI Use Disclosure Report
+% Compile: pdflatex ai_disclosure.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{plain}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries COMAP AI Use Disclosure Report}\\[0.35em]
+{\large HiMCM 2022 Problem A --- The Need for Bees}\\[0.25em]
+{\normalsize Team XXXX}
+\end{center}
+
+\vspace{0.8em}
+\noindent
+This report documents artificial-intelligence assistance used while
+preparing our contest materials, in accordance with COMAP contest rules
+on AI disclosure. Tooling was limited to the Cursor IDE agent for code
+scaffolding and LaTeX formatting support. No AI system was used to invent
+numerical results; all tables and figures are produced by executing our
+Python pipeline and reading \texttt{results/*.csv}.
+
+\section{Tools and scope}
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Tool & Role & Contested artifacts touched \\
+    \midrule
+    Cursor (AI coding agent)
+      & Assisted PyTorch training-loop / Euler unroll drafting
+      & \texttt{src/autograd\_engine/torch\_sim.py} \\
+    Cursor
+      & Assisted elasticity \& bifurcation scripts
+      & \texttt{src/sensitivity/}, \texttt{src/stress\_test/} \\
+    Cursor
+      & Assisted orchard OR module \& pytest path config
+      & \texttt{src/pollination/orchard\_20acres.py} \\
+    Cursor
+      & Assisted LaTeX table/figure wiring \& document shells
+      & \texttt{paper/*.tex} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Interaction prompts that affected model or algorithm design were logged
+in the pack file \texttt{prompts/cursor\_log.md} for auditability.
+
+\section{What the human team did independently}
+We explicitly attest that the following were conceived, specified, and
+signed off by the student team without outsourcing scientific judgment
+to an AI system:
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Differential-equation mechanism:} choice of the five
+        compartments \(B,H,F,P,N\), dual-feedback structure (social
+        inhibition and nutritional gating), and stress-channel meanings
+        (pesticide, Varroa, frost).
+  \item \textbf{Activation-function smoothing design:} decision to use
+        Holling-III, Softplus state projection, and seasonal
+        \(\Omega(t)\) so that Autograd elasticities are well-defined.
+  \item \textbf{Summary Sheet:} narrative priorities and the final
+        one-page claims; every numeric entry was typed from measured CSV
+        outputs after human inspection.
+  \item \textbf{Grower / association advisory letter:} field
+        recommendations on fan placement, bloom feeding, and Varroa
+        triggers were written as a human policy brief; AI only helped
+        with LaTeX layout.
+\end{enumerate}
+
+\section{What AI assistance was used for}
+\begin{itemize}[leftmargin=1.4em]
+  \item Drafting boilerplate for PyTorch \texttt{nn.Module} parameter
+        registration and day-loop bookkeeping.
+  \item Generating initial LaTeX \texttt{booktabs} tables and
+        \texttt{includegraphics} paths tied to existing figure filenames.
+  \item Fixing pytest \texttt{pythonpath} so \texttt{from src...}
+        imports resolve.
+\end{itemize}
+AI suggestions were reviewed, edited, and re-run by the team. When an
+AI-proposed number disagreed with a CSV, the CSV prevailed.
+
+\section{Data integrity statement}
+We did not ask any AI system to fabricate experimental outcomes. Peak
+populations, elasticities, CCD tips
+(\(\mu_F^{\ast,\mathrm{soft}}=0.11\),
+\(\mu_F^{\ast}=0.305\)), and orchard optima
+(\(K^\star=40\), YieldRatio \(0.848\)) are copied from
+\begin{center}
+\texttt{ccd\_healthy\_vs\_stress\_snapshot.csv},\\
+\texttt{autograd\_elasticity\_ranking.csv},\\
+\texttt{ccd\_tipping\_point.csv},\\
+\texttt{orchard\_pollination\_optimization.csv}.
+\end{center}
+
+\section{Signatures}
+\begin{flushleft}
+Team member names / roles: \underline{\hspace{3.2in}}\\[1.2em]
+Date: \underline{\hspace{1.6in}} \hfill Contest control number: XXXX
+\end{flushleft}
+
+\end{document}
