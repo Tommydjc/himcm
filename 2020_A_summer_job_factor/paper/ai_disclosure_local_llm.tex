@@ -1,0 +1,29 @@
+% Appendix: COMAP generative-AI disclosure.
+\section*{Appendix: Use of Generative AI Tools}
+\label{app:ai-disclosure}
+
+This appendix follows the COMAP \emph{Policy on Use of Generative AI Tools}.
+
+\subsection*{A.1 Tools}
+
+\begin{itemize}
+  \item \textbf{Local LLM.}
+        Job-ad scoring and latent-factor names run through Ollama
+        \texttt{qwen2.5:7b} on \texttt{localhost:11434}.
+        If Ollama is down, a keyword mock writes the same CSV schema.
+  \item \textbf{Coding assistant.}
+        Cursor drafted Python modules and this \LaTeX\ set.
+        Design prompts sit in \texttt{prompts/cursor\_log.md}.
+\end{itemize}
+
+\subsection*{A.2 What the models must not do}
+
+The LLM does not invent KMO, eigenvalues, entropy weights, or LOOCV scores.
+Those numbers come from \texttt{results/*.csv}.
+Figures are script outputs in \texttt{paper\_figures/}.
+
+\subsection*{A.3 Human checks}
+
+We reject contest-template statistics that are absent from disk
+(KMO \(0.782\), \(71.4\%\) variance, Top-3 \(92\%\)).
+We keep the 15-item table labeled \texttt{SYNTHETIC\_FALLBACK}.

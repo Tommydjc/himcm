@@ -54,3 +54,5 @@ sources:
 - [2023 研究闭环](../playbooks/2023-a-study-loop.md)
 - [复现命令](../playbooks/2023-repro-sim.md)
 - [月末指标](../sources/monthly-metrics.md)
+- [白皮书短页](2023-a-dandelion.md)
+- [Conv2D CA](../methods/conv2d-spatiotemporal-ca.md)

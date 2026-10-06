@@ -10,10 +10,12 @@ sources:
   - STUDIES.md
 ```
 
-2024 A 行现为 **ingested**（非 contest-ready）。本文件不再维护第二份状态表，避免与根目录分叉。
+2020–2025 行现为 **ingested**（非 contest-ready）。本文件不再维护第二份状态表，避免与根目录分叉。
 
 ## Related
 
 - [目录](index.md)
+- [2025 问题](problems/2025-a-evacuation.md)
+- [2020 问题](problems/2020-a-summer-job.md)
 - [2023 问题](problems/2023-a-dandelion-prisms.md)
 - [2024 问题](problems/2024-a-olympic-sde.md)

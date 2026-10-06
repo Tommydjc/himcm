@@ -10,6 +10,12 @@ sources:
   - AGENTS.md
 ```
 
+## [2026-10-06] ingest | 2020–2025 全量 Wiki 归档
+
+只读六年题包 Raw，未改任何 `results/*.csv`。新建用户规格 kebab 页：`problems/2025-a-evacuation.md`、`2024-a-olympics.md`、`2023-a-dandelion.md`、`2022-a-honeybee.md`、`2021-a-solar-storage.md`、`2020-a-summer-job.md`；methods 五页；playbooks 三页；comparisons 三页；sources 2020/2021/2025。保留已 ingest 的 `2022-a-honeybee-dynamics` / `2023-a-dandelion-prisms` / `2024-a-olympic-sde` 细页并 Related 互指。刷新 `wiki/index.md`、`wiki/synthesis.md`、根目录 `STUDIES.md`。
+
+核对：2025 office \(t_{\mathrm{clear}}=135\)；2024 Flag SAW 0.5360；2023 cover 0.4511；2022 \(K^\star=40\) YieldRatio 0.848；2021 capex \$9700 LPSP 0.2489 outage 2725 h；2020 KMO 0.445、\(w=(0.479,0.319,0.202)\)、LOOCV Top-1 0.20。GAT–PPO 优于规划器：unverified。2020 模板 KMO 0.782 拒绝。
+
 ## [2026-10-03] ingest | 2022 A + 2023 A study close-out
 
 只读 `2022_A_honeybee_dynamics/` 与 `2023_A_dandelion_prisms/` Raw，新建 2022 problem/methods/sources/playbooks/concepts，并按现行 CSV 刷新 2023 过期数字（温带 cover **0.4511**、TAROF **0.1512**、REJAP **0.5700**）。刷新 `wiki/index.md`、`synthesis.md`、`comparisons/evaluation-vs-simulation.md`、`STUDIES.md`。未改任一年 `results/*.csv` 或 `src/`。status=`ingested`（非 contest-ready）。
@@ -35,6 +41,8 @@ sources:
 ## Related
 
 - [目录](index.md)
+- [2025 问题](problems/2025-a-evacuation.md)
+- [2020 问题](problems/2020-a-summer-job.md)
 - [2022 问题](problems/2022-a-honeybee-dynamics.md)
 - [2023 问题](problems/2023-a-dandelion-prisms.md)
 - [2024 问题](problems/2024-a-olympic-sde.md)

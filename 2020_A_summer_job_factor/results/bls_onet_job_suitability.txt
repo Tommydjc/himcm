@@ -1,0 +1,6 @@
+pdf=2020_HiMCM_Problem_A.pdf contains zero URLs; occupations were mapped to BLS OOH and O*NET.
+bls_rows=10 file=/Users/tommysmac/himcm2/2020_A_summer_job_factor/data/raw/bls_ooh_quickfacts.csv
+bls_kmo=0.3797294741873555 bartlett_p=0.03932243336840268
+onet_occupations=12 file=/Users/tommysmac/himcm2/2020_A_summer_job_factor/data/raw/onet_work_context_problem_jobs.csv
+onet_kmo=0.41604988386289 bartlett_p=0.32780600494868145
+note=These are JOB-side matrices. They do not replace student Likert OriginalData.csv.

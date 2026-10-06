@@ -1,0 +1,81 @@
+% HiMCM 2021 Problem A --- One-page Summary Sheet
+% Measured numbers only (../results/*.csv). Prose: ~80% ASD-STE100.
+\documentclass[11pt]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2021 Problem A --- Summary Sheet}\\[0.15em]
+{\small Team XXXX \quad sources:
+\texttt{annual\_pv\_load\_8760h.csv},
+\texttt{optimal\_sizing\_solution.csv},
+\texttt{budget\_pareto\_front.csv},
+\texttt{lcos\_emerging\_tech.csv},
+\texttt{crewai\_adaptive\_vs\_passive.csv}}
+\end{center}
+\vspace{0.3em}
+
+\noindent\textbf{What we built.}
+Hay--Davies PV and Markov load (8760\,h). SOC/SOH pack physics.
+SciPy HiGHS MILP for \(x_k\in\{0..4\}\) and typical-day EMS. Budget
+Pareto front. Neuro-symbolic crewAI DSR bound to the appliance catalog.
+LCOS for LFP / Na-ion / VRFB / cement. Figures are script outputs. No
+hand-edited CSV cells.
+
+\medskip
+\noindent\textbf{Task 1 --- Solar and load
+(\texttt{annual\_pv\_load\_8760h.csv}).}
+PV \(\mathbf{12{,}266\,kWh/y}\) (mean \(1.400\,\mathrm{kW}\)).
+Load \(\mathbf{15{,}398\,kWh/y}\) (mean \(1.758\,\mathrm{kW}\)).
+Energy gap \(\mathbf{3{,}132\,kWh}\). LPSP cannot fall below
+\(\approx 20\%\) with this array, with or without packs.
+
+\medskip
+\noindent\textbf{Tasks 2--3 --- \$10{,}000 BOM
+(\texttt{optimal\_sizing\_solution.csv}).}
+\textbf{3 FREEDOH packs + 1 lead-carbon pack}
+(\(24.6\,\mathrm{kWh}\), \(10.5\,\mathrm{kW}\), capex \textbf{\$9{,}700}).
+Tesla Powerwall+ costs \$10{,}500. It is \textbf{not} in this mix.
+It appears only at the \$18k Pareto-front row.
+8760-hour LPSP \(\mathbf{0.319}\); outage hours \(\mathbf{3{,}057}\);
+outage events \(\mathbf{366}\); 10-year TCO \$157{,}669.
+
+\medskip
+\noindent\textbf{Budget knees
+(\texttt{budget\_pareto\_front.csv}).}
+We mark \$8{,}000 and \$10{,}000 on the Pareto-front figure.
+\$8k BOM: 2 FREEDOH + 1 lead-carbon, \textbf{3{,}576\,h / 391 events},
+LPSP \(0.362\).
+\$10k: as above, \textbf{3{,}057\,h / 366 events}.
+Events are contiguous deficit runs (hundreds per year). They are
+\emph{not} ``six outages.'' \$12k--\$15k is a hardware plateau (same BOM,
+2{,}810\,h).
+
+\medskip
+\noindent\textbf{crewAI DSR
+(\texttt{crewai\_adaptive\_vs\_passive.csv}).}
+Days 40--42 (72\,h, 2021-02-09 to 02-11) on the \$10k fleet:
+shed \(\mathbf{22.66\,kWh}\); unserved energy
+\(\mathbf{22.51\to 9.22\,kWh}\); unserved hours \(\mathbf{16\to 5}\)
+(longest run \(10\to 3\)\,h). Both SOC traces rest on
+\(SOC_{\min}=\mathbf{0.178}\).
+We do \textbf{not} report a 32.5\,h blackout cleared to zero or a
+9.2\% SOC hover. Those values are not in the CSV.
+
+\medskip
+\noindent\textbf{Task 4 --- LCOS
+(\texttt{lcos\_emerging\_tech.csv}, \(r=0.07\), \(N=20\)).}
+Sodium-ion \textbf{\$0.161/kWh} (lowest; TRL 7 scenario).
+VRFB \$0.292; LFP baseline \$0.410; cement-structural \$1.273 (TRL 4).
+
+\medskip
+\noindent\textbf{Task 5 --- Homeowner takeaway.}
+Do not buy panels as a winter-pack substitute. Size storage from usable
+kWh and DoD, not nameplate slogans. In dark-cold hours, defer
+dryer/dishwasher, dim lights, and keep fridge, well, router, and the
+work laptop. See \texttt{letter\_to\_homeowners.tex}.
+
+\end{document}

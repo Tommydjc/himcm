@@ -1,0 +1,98 @@
+% HiMCM 2020 Problem A --- two-page student guide (Requirement 5)
+% Non-technical. True ranks only. ~80% ASD-STE100.
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{myheadings}
+\markright{Team XXXX \hfill A Data-Driven Summer Job Guide}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Navigating Your First Paycheck:}\\[0.2em]
+{\large A Data-Driven Guide to Finding the Ideal Summer Job}\\[0.4em]
+{\small HiMCM 2020 Problem A \quad Team XXXX}
+\end{center}
+
+\medskip
+\noindent
+This note is for students, not for a statistics class.
+We ranked eight common summer job candidates with a small data pipeline.
+The pipeline is imperfect.
+Read the three traps first.
+Then use the web tool in three steps.
+
+\section*{What the data actually said}
+
+We used 50 student rows and eight job ads (lifeguard, camp counselor, tutor, fast-food crew, retail clerk, caddy, pet sitter, swim coach).
+Pay snippets come from those ads.
+Example: a municipal lifeguard ad lists about \(\$15.50\) to \(\$18.00\) per hour.
+A tutor ad lists about \(\$22\) to \(\$35\) per hour.
+
+A simple score that rewards skill/network, rewards schedule control, and penalizes physical load put \textbf{tutor} first and \textbf{lifeguard} last.
+That score is not ``who you should be.''
+It is one ranking under one formula.
+
+\section*{Three traps}
+
+\textbf{Trap 1 --- Pretty names can be wrong.}
+A slide deck may call three scores ``money,'' ``resume,'' and ``pain.''
+Our rotation did not recover that split.
+Safety, friends, and skills sat on the same score.
+Hourly wage sat with commute and control, not with tips alone.
+If a poster says ``Factor 1 \(=\) cash,'' ask to see the loading table.
+
+\textbf{Trap 2 --- A high hourly rate is not the whole job.}
+Caddie loops can pay a lot on a busy Saturday.
+The same loop is sun, hills, and a heavy bag.
+Fast food is easier to get and harder on your feet.
+Tutor pay is high and the work is mostly indoor and seated.
+Write down cash, hours, heat, and what you can put on an application.
+
+\textbf{Trap 3 --- A computer rank is not a hiring officer.}
+Our classifier saw 50 labeled students.
+Its best-guess hit rate for the single true job was \(20\%\).
+Guessing the most common job (retail) hit \(22\%\).
+So the model is weaker than a simple ``most people picked retail'' rule.
+Use it to compare options.
+Do not treat a \(40\%\) match as a promise.
+
+\section*{Three-step web tool}
+
+The tool is \texttt{SummerJobMatch}.
+On a contest laptop run:
+\texttt{streamlit run src/web\_app/app.py}.
+Then:
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=0.35em]
+\item \textbf{Pick a preset or move three sliders (1 to 10).}
+``I need money'' sets slider 1 to 9 and slider 3 to 8.
+``I need application stories'' sets slider 2 to 10.
+``I want an easy summer'' sets slider 3 to 1.
+\item \textbf{Read three cards.}
+Gold \(=\) best match under the model.
+Silver \(=\) runner-up.
+Red \(=\) the strongest mismatch.
+Each card shows a pay span copied from the job ad.
+\item \textbf{Ignore the nickname if the card fights your body.}
+Example: the ``easy summer'' preset still ranked \textbf{lifeguard} first in our run (\(40.9\%\)).
+That is a model glitch, not advice to sit in the sun all day.
+If you hate heat, throw that rank out.
+\end{enumerate}
+
+\section*{A short checklist before you apply}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=0.25em]
+\item Can you name the cash range from a real posting, not a rumor?
+\item Can you work the posted hours, including weekends?
+\item What skill or story will you write on a college form in September?
+\item What is the worst physical day in that job, and have you tried a sample of it?
+\end{itemize}
+
+\noindent
+If those four answers are clear, you do not need a neural net.
+The tool is a map.
+You still choose the road.
+
+\end{document}

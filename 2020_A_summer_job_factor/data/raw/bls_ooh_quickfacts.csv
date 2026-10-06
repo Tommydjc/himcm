@@ -1,0 +1,11 @@
+occupation,median_hourly_usd,median_annual_usd,outlook_pct,n_jobs_2025,education_rank,env_standing_mention,env_outdoor_mention,env_sedentary_mention,education_raw
+animal_care,17.08,35530.0,11.0,413000.0,2.0,0.0,0.0,1.0,High school diploma or equivalent
+cashier,15.81,32880.0,-6.0,3106300.0,1.0,1.0,0.0,1.0,No formal educational credential
+computer_support,30.24,62890.0,-3.0,903100.0,,0.0,1.0,1.0,[See How to Become One](https://www.bls.gov/ooh/computer-and-information-technol
+data_scientist,57.8,120230.0,35.0,275600.0,4.0,0.0,0.0,1.0,Bachelor's degree
+fast_food,15.24,31710.0,5.0,5143000.0,1.0,1.0,1.0,1.0,No formal educational credential
+office_clerk,21.64,45010.0,-6.0,2600000.0,2.0,0.0,0.0,1.0,High school diploma or equivalent
+recreation_worker,17.58,36560.0,4.0,346900.0,2.0,0.0,1.0,1.0,High school diploma or equivalent
+retail_sales,17.1,35560.0,0.0,4271400.0,1.0,1.0,1.0,1.0,No formal educational credential
+survey_researcher,33.4,69460.0,-5.0,9800.0,5.0,0.0,1.0,1.0,Master's degree
+waiter,16.94,35230.0,2.0,2284400.0,1.0,1.0,0.0,1.0,No formal educational credential

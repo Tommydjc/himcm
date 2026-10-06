@@ -1,0 +1,77 @@
+% HiMCM 2020 Problem A --- one-page Summary Sheet
+% Measured numbers only. Prose: ~80% ASD-STE100.
+\documentclass[11pt]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2020 Problem A --- Summary Sheet}\\[0.15em]
+{\small Team XXXX \quad sources:
+\texttt{OriginalData.csv},
+\texttt{factor\_loadings.csv},
+\texttt{entropy\_weights.csv},
+\texttt{model\_comparison\_metrics.csv},
+\texttt{DATA\_SOURCE.txt}}
+\end{center}
+\vspace{0.25em}
+
+\noindent\textbf{Data.}
+\(N=50\), \(p=15\) Likert rows in \texttt{OriginalData.csv}.
+The file is \texttt{SYNTHETIC\_FALLBACK} (seed 2020).
+GitHub HiMCM2020 is 400 rows \(\times\) 7 unnamed scores, not this 15-item table.
+
+\medskip
+\noindent\textbf{Suitability.}
+KMO \(=\mathbf{0.445}\) (below \(0.70\)).
+Bartlett \(\chi^2=\mathbf{170.05}\), df \(=105\), \(p=\mathbf{6.10\times 10^{-5}}\).
+We reject \(R=I_{15}\).
+We do \emph{not} report KMO \(0.782\).
+
+\medskip
+\noindent\textbf{Latent factors.}
+PC extraction \(+\) Kaiser-normalized Varimax, contest \(m=3\).
+Eigenvalues \(3.184,\,1.645,\,1.566\).
+Share of trace \(\mathbf{42.6\%}\) (not \(71.4\%\)).
+Kaiser \(\lambda>1\) keeps \(m=6\).
+F1 \(=\) network-skill latent factor (safety, network, skill, tips).
+F2 \(=\) autonomy-access latent factor.
+F3 \(=\) burden latent factor (physical \(+\); boss fairness \(-\)).
+Contest names financial yield / human capital / ergonomic burden do not match \(\Lambda^{\ast}\).
+
+\medskip
+\noindent\textbf{Entropy weights}
+(\texttt{entropy\_weights.csv}).
+\(\mathbf{w=(0.479,\,0.319,\,0.202)}\).
+Utility \(U=w_1F_1+w_2F_2-w_3F_3\).
+Tutor ranks first (\(U=+0.213\)).
+Lifeguard ranks last (\(U=-0.681\)).
+We do not use \(w=(0.412,0.354,0.234)\).
+
+\medskip
+\noindent\textbf{Clusters}
+(\texttt{cluster\_centroids.csv}).
+\(K=3\) by contest rule.
+Silhouette at \(K=3\) is \(0.260\).
+Elbow prefers \(K=2\).
+Max silhouette is \(K=7\).
+Sizes \(23/10/17\).
+Cluster 2 is not a low-burden group (template SSE \(2.28\)).
+
+\medskip
+\noindent\textbf{Classifiers (LOOCV, 50 folds).}
+Features: Thompson \(F\in\mathbb{R}^{50\times 3}\) only.
+Softmax Top-1 \(\mathbf{0.20}\), Top-3 \(\mathbf{0.38}\), log-loss \(2.519\).
+ReLU MLP Top-1 \(0.20\), Top-3 \(\mathbf{0.48}\), log-loss \(4.865\).
+Majority Top-1 \(\mathbf{0.22}\).
+We do \emph{not} report Top-3 \(92\%\) vs \(84\%\).
+
+\medskip
+\noindent\textbf{Tool.}
+Streamlit maps 1--10 sliders onto student min--max of \(F\), then Softmax.
+Pragmatist preset (9,5,8): Retail Clerk \(41.8\%\).
+Treat ranks as preference, not a job offer.
+
+\end{document}

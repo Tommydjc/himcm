@@ -1,0 +1,58 @@
+{
+  "alert": {
+    "level": 3,
+    "t0": 568,
+    "t1": 639,
+    "soc_now": 0.17804878048780487,
+    "soc_min_forecast": 0.17804878048780487,
+    "target_cut_frac": 0.4994613232814176,
+    "mean_pv_kw": 0.8224288643702453,
+    "mean_temp_c": 7.2875000000000005,
+    "reason": "Level-3 blizzard: SOC line 20% breached in forecast (now 17.8%, min 17.8%); request 50% load cut."
+  },
+  "dialogue": [
+    {
+      "agent": "EMS_Butler",
+      "text_zh": "三级暴雪缺电预警：SOC 警戒线 20% 将在预报窗内被击穿（当前 17.8%，无需求响应最低 17.8%）。窗内均温 7.3°C、光伏 0.82 kW。请家庭在未来 72 h 削减约 50% 功率（约 0.7 kW）。",
+      "text_en": "Level-3 blizzard: SOC line 20% breached in forecast (now 17.8%, min 17.8%); request 50% load cut."
+    },
+    {
+      "agent": "Role_A_Survival_Parent",
+      "text_zh": "精打细算家长：关闭地暖、拔掉非必要插头保命。冰箱和水井泵留下，烘干机/洗碗机/洗衣机/热水器全部停。估计可削 2.9 kW。",
+      "text_en": "Shut floor heating and unplug non-essentials; keep fridge and well pump."
+    },
+    {
+      "agent": "Role_B_WFH",
+      "text_zh": "居家办公成员：我可以不烘干衣服、调暗灯光，但我的工作电脑和路由器不能断。洗碗机可推迟。估计可削 1.1 kW。",
+      "text_en": "I can skip the dryer and dim lights, but the work PC and router stay on."
+    },
+    {
+      "agent": "Family_Agreement",
+      "text_zh": "妥协：停 Electric_Clothes_Dryer, Dishwasher；地暖设定 -2.5°C；灯光调暗 45%；电脑/路由/冰箱受保护。合约削负荷 1.1 kW。",
+      "text_en": "shed=['Electric_Clothes_Dryer', 'Dishwasher'], HVAC -2.5 K, cut 1.1 kW."
+    }
+  ],
+  "action": {
+    "shed_appliances": [
+      "Electric_Clothes_Dryer",
+      "Dishwasher"
+    ],
+    "hvac_temp_offset": -2.5,
+    "power_cut_kW": 1.116365,
+    "light_dim_frac": 0.45,
+    "protected_appliances": [
+      "Refrigerator_Freezer",
+      "WiFi_Router_Comm",
+      "Home_Office_Laptop",
+      "Well_Water_Pump"
+    ]
+  },
+  "metrics": {
+    "soc_min_no_dsr": 0.17804878048780487,
+    "soc_min_dsr": 0.17804878048780487,
+    "def_kwh_no_dsr": 52.38473125738114,
+    "def_kwh_dsr": 1.557232074035789,
+    "mean_cut_kw": 0.802757200168101,
+    "e_capacity_kWh": 24.6
+  }
+}

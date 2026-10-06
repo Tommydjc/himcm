@@ -1,0 +1,4 @@
+model,features,n_params,protocol,n_folds,top1_accuracy,top3_hit_rate,log_loss
+linear_softmax,Thompson F (50 x 3),32,LOOCV,50,0.2,0.38,2.5185821143759104
+mlp_relu_16_dropout02,Thompson F (50 x 3),200,LOOCV,50,0.2,0.48,4.865178114598015
+majority_baseline_LOOCV,none (label mode of 49),0,LOOCV,50,0.22,,

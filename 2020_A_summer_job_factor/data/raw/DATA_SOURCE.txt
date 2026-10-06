@@ -1,0 +1,13 @@
+status=SPLIT_SOURCES
+likert_15col=data/raw/OriginalData.csv  SYNTHETIC_FALLBACK seed=2020  NOT in HiMCM2020 repo (repo is 7-D not 15-D)
+github_survey=data/raw/student_job_factor_scores.csv  400 rows = 50 students x 8 jobs x 7 unnamed factors, scale 10-100
+github_repo=https://github.com/HiMCM2020/HiMCM_2020
+retrieved_via=Firecrawl v1/scrape (GitHub raw Connection reset by peer)
+work_choice=data/raw/work_choice.csv  replaced with GitHub work_choice.txt (50 IDs in 0-7)
+work_choice_caveat=entropy.py in that repo can overwrite labels from argmax of entropy scores
+github_400x7_KMO=0.5106  bartlett_p=5.199370e-02
+kmo_gap=Neither the 15-col fallback nor the 7-col GitHub matrix reaches KMO>0.70; fix is new respondents on a designed common-factor scale, not more unrelated crawls.
+bls_ooh=data/raw/bls_ooh_quickfacts.csv  Firecrawl of occupations named in Problem A
+onet_pages=data/raw/bls_onet_pages/  O*NET Work Context % from summary pages
+bls_kmo=1.2212554448819498e-61 onet_kmo=1.2149337610911946e-62
+job_side_vs_student=job-attribute R is not student-item R; KMO of OriginalData.csv is unchanged.

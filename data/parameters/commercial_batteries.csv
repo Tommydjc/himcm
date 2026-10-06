@@ -1,0 +1,5 @@
+model_name,capacity_kWh,continuous_power_kW,roundtrip_eff,cost_usd,cycle_life,chemistry
+Tesla_Powerwall_Plus,13.5,5.0,0.9,10500,4000,LFP
+Enphase_IQ_10T,10.08,3.84,0.89,8200,4000,LFP
+FREEDOH_Module,5.0,2.5,0.85,2200,2500,LFP
+Lead_Carbon_Array,9.6,3.0,0.78,3100,1200,Lead-Carbon

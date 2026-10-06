@@ -9,17 +9,30 @@ status: ingested
 sources:
   - STUDIES.md
   - AGENTS.md
+  - 2020_A_summer_job_factor/results/entropy_weights.csv
+  - 2021_A_solar_storage/results/optimal_sizing_solution.csv
   - 2022_A_honeybee_dynamics/results/orchard_pollination_recommendation.csv
   - 2023_A_dandelion_prisms/results/monthly_metrics.csv
   - 2024_A_olympic_sde/results/brisbane_2032_ranking.csv
+  - 2025_A_evacuation/results/experiment_summary.csv
 ```
 
-## 题
+## 题（白皮书短页 + 已 ingest 细页）
 
-- [2022 A Honeybee Dynamics](problems/2022-a-honeybee-dynamics.md) — 可微蜂群 + 弹性 + CCD + 20 英亩授粉 OR（ingested）
-- [2023 A Dandelion Prisms](problems/2023-a-dandelion-prisms.md) — 机理/空间仿真 + 影响因子（ingested）
-- [2024 A Olympic SDE](problems/2024-a-olympic-sde.md) — MCDM + 小样本 ML 互证（ingested，非 contest-ready）
-- 2025 A Evacuation — 题包 `2025_A_evacuation/`；problem 页未挂时数字只认该包 CSV（STUDIES 标 ingested）
+- [2025 A Evacuation](problems/2025-a-evacuation.md) — 图清扫 + 规划器 \(t_{\mathrm{clear}}\)；GAT–PPO 代码路径未证实优于基线
+- [2024 A Olympics](problems/2024-a-olympics.md) — 短页；细表 [2024-a-olympic-sde](problems/2024-a-olympic-sde.md)
+- [2023 A Dandelion](problems/2023-a-dandelion.md) — 短页；细表 [2023-a-dandelion-prisms](problems/2023-a-dandelion-prisms.md)
+- [2022 A Honeybee](problems/2022-a-honeybee.md) — 短页；细表 [2022-a-honeybee-dynamics](problems/2022-a-honeybee-dynamics.md)
+- [2021 A Solar storage](problems/2021-a-solar-storage.md) — MCMC 负荷 + MILP + CrewAI DSR
+- [2020 A Summer job](problems/2020-a-summer-job.md) — EFA + LLMFactor + 熵权 + K-Means + LOOCV（SYNTHETIC_FALLBACK）
+
+## 方法（跨年新页）
+
+- [EFA + LLMFactor](methods/factor-analysis-llmfactor.md)
+- [PyTorch Autograd 灵敏度](methods/pytorch-autograd-sensitivity.md)
+- [CrewAI 认知需求响应](methods/crewai-cognitive-demand-response.md)
+- [Conv2D 空间 CA](methods/conv2d-spatiotemporal-ca.md)
+- [熵权](methods/entropy-weight-objective-scoring.md)
 
 ## 方法（2022）
 
@@ -54,6 +67,9 @@ sources:
 
 ## Playbook
 
+- [4h 交卷](playbooks/4h-combat-playbook.md)
+- [规格驱动 Cursor](playbooks/spec-driven-cursor-coding.md)
+- [ASD-STE100 写作](playbooks/asd-ste100-academic-writing.md)
 - [2022 研究闭环](playbooks/2022-a-study-loop.md)
 - [2022 复现命令](playbooks/2022-repro-bee.md)
 - [2023 研究闭环](playbooks/2023-a-study-loop.md)
@@ -61,6 +77,17 @@ sources:
 - [2024 研究闭环](playbooks/2024-a-study-loop.md)
 - [2024 复现命令](playbooks/2024-repro-eval.md)
 - [CSV 到图](playbooks/results-to-figures.md)
+
+## Source（2020）
+
+- [factor_loadings](sources/2020-factor-loadings.md)
+- [entropy_weights](sources/2020-entropy-weights.md)
+- [model_comparison](sources/2020-model-comparison.md)
+
+## Source（2021）
+
+- [optimal_sizing](sources/2021-optimal-sizing.md)
+- [crewai_adaptive](sources/2021-crewai-adaptive.md)
 
 ## Source（2022）
 
@@ -84,15 +111,26 @@ sources:
 - [ml_prediction_2032](sources/ml-prediction-2032.md)
 - [ahp_vs_ml_weights](sources/ahp-vs-ml-weights.md)
 
+## Source（2025）
+
+- [experiment_summary](sources/2025-experiment-summary.md)
+
 ## 对照与总览
 
 - [评价 vs 仿真](comparisons/evaluation-vs-simulation.md)
+- [合成数据陷阱](comparisons/synthetic-data-trap.md)
+- [Notebook vs 模块](comparisons/notebook-hell-vs-modular.md)
+- [被动停电谬误](comparisons/passive-blackout-fallacy.md)
 - [synthesis](synthesis.md)
 - [log](log.md)
+- [STUDIES 指针](STUDIES.md)
 
 ## Related
 
-- [2022 问题](problems/2022-a-honeybee-dynamics.md)
-- [2023 问题](problems/2023-a-dandelion-prisms.md)
-- [2024 问题](problems/2024-a-olympic-sde.md)
+- [2025 问题](problems/2025-a-evacuation.md)
+- [2024 问题](problems/2024-a-olympics.md)
+- [2023 问题](problems/2023-a-dandelion.md)
+- [2022 问题](problems/2022-a-honeybee.md)
+- [2021 问题](problems/2021-a-solar-storage.md)
+- [2020 问题](problems/2020-a-summer-job.md)
 - [synthesis](synthesis.md)

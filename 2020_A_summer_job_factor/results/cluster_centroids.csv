@@ -1,0 +1,4 @@
+cluster,persona_en,persona_zh,n_members,centroid_F1,centroid_F2,centroid_F3,template_sse,axis_F1,axis_F2,axis_F3
+0,The Pragmatist,务实经济型,23,0.9001322026233668,0.06343843046769779,0.03005783692957152,0.12733538366226652,Human Capital & Networking Value,Autonomy & Commute Convenience,Physical & Mental Burden
+1,The Career-Builder,履历投资型,10,-0.7631701245985066,1.2291397131928194,0.32540075923426637,0.132945295237407,Human Capital & Networking Value,Autonomy & Commute Convenience,Physical & Mental Burden
+2,The Leisure-Seeker,自由舒适型,17,-0.7689023184913166,-0.8088518254520736,-0.2320786965719297,2.2816158308911754,Human Capital & Networking Value,Autonomy & Commute Convenience,Physical & Mental Burden

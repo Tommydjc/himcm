@@ -59,3 +59,5 @@ DFM–Torch 基线、弹性表、CCD 软/硬拐点、果园 \(K\) 扫描与 LaTe
 - [果园蜂箱 OR](../methods/orchard-hive-or.md)
 - [2022 研究闭环](../playbooks/2022-a-study-loop.md)
 - [健康/胁迫快照](../sources/ccd-healthy-vs-stress.md)
+- [白皮书短页](2022-a-honeybee.md)
+- [PyTorch Autograd](../methods/pytorch-autograd-sensitivity.md)

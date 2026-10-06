@@ -1,0 +1,202 @@
+[
+  {
+    "job_id": "lifeguard",
+    "pdf_mention": "lifeguarding",
+    "url": "https://www.bls.gov/ooh/protective-service/lifeguards-ski-patrol-and-other-recreational-protective-service-workers.htm",
+    "path": "data/raw/bls_onet_pages/lifeguard.md",
+    "status": "fail:RuntimeError:empty Firecrawl body for https://www.bls.gov/ooh/protective-service/lifeguards-ski-patrol-and-other-recreational-protective-service-workers.htm",
+    "bytes": 0
+  },
+  {
+    "job_id": "cashier",
+    "pdf_mention": "cashier at a store",
+    "url": "https://www.bls.gov/ooh/sales/cashiers.htm",
+    "path": "data/raw/bls_onet_pages/cashier.md",
+    "status": "ok",
+    "bytes": 22646
+  },
+  {
+    "job_id": "waiter",
+    "pdf_mention": "wait staff at a restaurant",
+    "url": "https://www.bls.gov/ooh/food-preparation-and-serving/waiters-and-waitresses.htm",
+    "path": "data/raw/bls_onet_pages/waiter.md",
+    "status": "ok",
+    "bytes": 27426
+  },
+  {
+    "job_id": "retail_sales",
+    "pdf_mention": "cashier at a store / store",
+    "url": "https://www.bls.gov/ooh/sales/retail-sales-workers.htm",
+    "path": "data/raw/bls_onet_pages/retail_sales.md",
+    "status": "ok",
+    "bytes": 30291
+  },
+  {
+    "job_id": "fast_food",
+    "pdf_mention": "wait staff / food service",
+    "url": "https://www.bls.gov/ooh/food-preparation-and-serving/food-and-beverage-serving-and-related-workers.htm",
+    "path": "data/raw/bls_onet_pages/fast_food.md",
+    "status": "ok",
+    "bytes": 33149
+  },
+  {
+    "job_id": "recreation_worker",
+    "pdf_mention": "recreation activities",
+    "url": "https://www.bls.gov/ooh/personal-care-and-service/recreation-workers.htm",
+    "path": "data/raw/bls_onet_pages/recreation_worker.md",
+    "status": "ok",
+    "bytes": 28621
+  },
+  {
+    "job_id": "animal_care",
+    "pdf_mention": "physical activity jobs",
+    "url": "https://www.bls.gov/ooh/personal-care-and-service/animal-care-and-service-workers.htm",
+    "path": "data/raw/bls_onet_pages/animal_care.md",
+    "status": "ok",
+    "bytes": 32462
+  },
+  {
+    "job_id": "self_enrichment_teacher",
+    "pdf_mention": "analytical skills / teaching-like",
+    "url": "https://www.bls.gov/ooh/education-training-and-library/self-enrichment-teachers.htm",
+    "path": "data/raw/bls_onet_pages/self_enrichment_teacher.md",
+    "status": "fail:RuntimeError:empty Firecrawl body for https://www.bls.gov/ooh/education-training-and-library/self-enrichment-teachers.htm",
+    "bytes": 0
+  },
+  {
+    "job_id": "office_clerk",
+    "pdf_mention": "office administration",
+    "url": "https://www.bls.gov/ooh/office-and-administrative-support/general-office-clerks.htm",
+    "path": "data/raw/bls_onet_pages/office_clerk.md",
+    "status": "ok",
+    "bytes": 25697
+  },
+  {
+    "job_id": "data_scientist",
+    "pdf_mention": "data analysis",
+    "url": "https://www.bls.gov/ooh/math/data-scientists.htm",
+    "path": "data/raw/bls_onet_pages/data_scientist.md",
+    "status": "ok",
+    "bytes": 26442
+  },
+  {
+    "job_id": "survey_researcher",
+    "pdf_mention": "research",
+    "url": "https://www.bls.gov/ooh/life-physical-and-social-science/survey-researchers.htm",
+    "path": "data/raw/bls_onet_pages/survey_researcher.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.bls.gov/ooh/life-physical-and-social-science/survey-researchers.htm: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 11, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 32s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "computer_support",
+    "pdf_mention": "work from home virtually/electronically",
+    "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+    "path": "data/raw/bls_onet_pages/computer_support.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 12, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 31s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_lifeguard",
+    "pdf_mention": "lifeguarding",
+    "url": "https://www.onetonline.org/link/summary/33-9092.00",
+    "path": "data/raw/bls_onet_pages/onet_lifeguard.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/33-9092.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 13, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 10s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_cashier",
+    "pdf_mention": "cashier at a store",
+    "url": "https://www.onetonline.org/link/summary/41-2011.00",
+    "path": "data/raw/bls_onet_pages/onet_cashier.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/41-2011.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 14, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 9s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_waiter",
+    "pdf_mention": "wait staff at a restaurant",
+    "url": "https://www.onetonline.org/link/summary/35-3031.00",
+    "path": "data/raw/bls_onet_pages/onet_waiter.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/35-3031.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 15, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 8s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_retail",
+    "pdf_mention": "cashier at a store",
+    "url": "https://www.onetonline.org/link/summary/41-2031.00",
+    "path": "data/raw/bls_onet_pages/onet_retail.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/41-2031.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 16, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 6s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_fast_food",
+    "pdf_mention": "wait staff / food",
+    "url": "https://www.onetonline.org/link/summary/35-3023.00",
+    "path": "data/raw/bls_onet_pages/onet_fast_food.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/35-3023.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 17, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 5s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_recreation",
+    "pdf_mention": "recreation",
+    "url": "https://www.onetonline.org/link/summary/39-9032.00",
+    "path": "data/raw/bls_onet_pages/onet_recreation.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/39-9032.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 18, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 3s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_animal",
+    "pdf_mention": "physical activity",
+    "url": "https://www.onetonline.org/link/summary/39-2021.00",
+    "path": "data/raw/bls_onet_pages/onet_animal.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/39-2021.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 19, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 2s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_tutor",
+    "pdf_mention": "analytical skills",
+    "url": "https://www.onetonline.org/link/summary/25-3041.00",
+    "path": "data/raw/bls_onet_pages/onet_tutor.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 429 for https://www.onetonline.org/link/summary/25-3041.00: {\"success\":false,\"error\":\"Rate limit exceeded. Consumed (req/min): 20, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 1s, resets at Tue Oct 06 2026 06:30:04 GMT+0000 (Coordinated Universal Time)\"}",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_office",
+    "pdf_mention": "office administration",
+    "url": "https://www.onetonline.org/link/summary/43-9061.00",
+    "path": "data/raw/bls_onet_pages/onet_office.md",
+    "status": "fail:RuntimeError:Firecrawl HTTP 502 for https://www.onetonline.org/link/summary/43-9061.00: Bad Gateway",
+    "bytes": 0
+  },
+  {
+    "job_id": "onet_data",
+    "pdf_mention": "data analysis",
+    "url": "https://www.onetonline.org/link/summary/15-2051.00",
+    "path": "data/raw/bls_onet_pages/onet_data.md",
+    "status": "ok",
+    "bytes": 63154
+  },
+  {
+    "job_id": "onet_research_asst",
+    "pdf_mention": "research",
+    "url": "https://www.onetonline.org/link/summary/19-4061.00",
+    "path": "data/raw/bls_onet_pages/onet_research_asst.md",
+    "status": "ok",
+    "bytes": 55211
+  },
+  {
+    "job_id": "onet_computer_support",
+    "pdf_mention": "work from home virtually/electronically",
+    "url": "https://www.onetonline.org/link/summary/15-1232.00",
+    "path": "data/raw/bls_onet_pages/onet_computer_support.md",
+    "status": "ok",
+    "bytes": 82289
+  },
+  {
+    "job_id": "onet_work_context_db",
+    "pdf_mention": "O*NET Work Context database (job-side factor structure)",
+    "url": "https://www.onetcenter.org/database.html",
+    "path": "data/raw/bls_onet_pages/onet_work_context_db.md",
+    "status": "ok",
+    "bytes": 65952
+  }
+]

@@ -1,0 +1,10 @@
+source=HiMCM2020/HiMCM_2020 OriginalData.txt via Firecrawl
+layout=N50_K8_D7 long_rows=400
+scale=[10,100]
+kmo_overall=0.510596
+bartlett_chi2=32.505699
+bartlett_df=21
+bartlett_p=5.199370e-02
+ln_det_R=-0.082120
+note=Does not replace 15-column OriginalData.csv; 7 dims are unnamed in the repo.
+note=KMO still below 0.70; Bartlett p is not < 0.001 on this 400x7 table.

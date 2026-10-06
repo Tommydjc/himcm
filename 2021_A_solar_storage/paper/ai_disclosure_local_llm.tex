@@ -1,0 +1,124 @@
+% Appendix: COMAP generative-AI disclosure (local open-source LLM).
+% \input{ai_disclosure_local_llm} at the end of the contest paper.
+% Prose: ~80% ASD-STE100.
+
+\section*{Appendix: Use of Generative AI Tools}
+\label{app:ai-disclosure}
+
+This appendix follows the COMAP contest
+\emph{Policy on Use of Generative AI Tools}. We report the tools, the
+purpose of use, the human checks that bind language-model output to
+electrical physics, and the work the student team completed alone.
+
+\subsection*{A.1 Tools declared}
+
+\begin{itemize}
+  \item \textbf{Local large language model.}
+        Household crisis dialogue is designed to run on a private
+        open-source stack: \texttt{Ollama} serving
+        \texttt{Qwen2.5-7B-Instruct} (\texttt{ollama/qwen2.5:7b}) at
+        \texttt{http://localhost:11434}.
+        Prompts and completions stay on the contest machine.
+        \texttt{src/agent\_sim/crew\_engine.py} does not call a cloud
+        LLM API (OpenAI, Anthropic, Google, or other).
+        The environment variable \texttt{OLLAMA\_MODEL} may retarget
+        the local tag. It does not open an external endpoint.
+  \item \textbf{Agent framework.}
+        \texttt{crewAI} (\texttt{Agent}, \texttt{Task}, \texttt{Crew},
+        \texttt{Process.sequential}) runs three roles
+        (microgrid butler, pragmatic parent, remote worker).
+        The terminal task must match the Pydantic schema
+        \texttt{LoadSheddingAgreement}.
+  \item \textbf{Coding assistant.}
+        The Cursor IDE agent drafted Python modules and this
+        \LaTeX\ appendix. Design prompts that affected algorithms are
+        logged in \texttt{prompts/cursor\_log.md} for audit.
+\end{itemize}
+
+If Ollama is down or the Qwen tag is not pulled, the engine prints a
+warning. It then uses a catalog heuristic that emits the \emph{same}
+Pydantic contract. In either branch, kilowatt values that enter the
+pack model come only from \texttt{AdaptiveLoadAdapter}. They do not
+come from free-text arithmetic in the language model.
+
+\subsection*{A.2 Purpose of use}
+
+We use the local model only to \emph{simulate} cognitive, multi-role
+demand response: how a household might defer appliances when an
+off-grid PV--storage microgrid hits a SOC warning (\(SOC<0.20\)) in a
+dark, cold window. We do not use it to invent meteorological series,
+MILP optima, or figure coordinates. Those come from Open-Meteo
+irradiance, the Hay--Davies PV model, the MCMC load synthesizer, SciPy
+HiGHS sizing, and \texttt{step\_soc} dynamics.
+
+\subsection*{A.3 Human verification and electrotechnical binding}
+
+We treat language-model (or heuristic) output as a \emph{symbolic}
+action list. Humans specified the checks below. The code enforces them
+before any watt enters the 8760\,h engine:
+
+\begin{enumerate}
+  \item \textbf{Name whitelist.}
+        \texttt{shed\_appliances} must be rows of
+        \texttt{data/raw/appliances\_catalog.csv}.
+        Unknown strings are dropped.
+  \item \textbf{Protected circuits.}
+        Refrigerator, well pump, Wi-Fi router, and the work laptop
+        cannot be shed. This matches catalog \texttt{priority\_level}
+        and the worker's non-negotiable IT load.
+  \item \textbf{Rated power and duty.}
+        Instantaneous cut is
+        \(P_{\mathrm{rated}}\times\mathrm{duty}\)
+        only in catalog peak hours. It is not an LLM-invented kilowatt.
+  \item \textbf{HVAC physics.}
+        Setpoint reduction \(\Delta T\) (field
+        \texttt{hvac\_temp\_offset\_c}) scales heat-pump coincidence
+        by \(8\%/^{\circ}\mathrm{C}\), clipped to \([0,1]\).
+  \item \textbf{Energy conservation.}
+        Post-DSR load satisfies
+        \(0 \le P_{\mathrm{dsr}}(t) \le P_{\mathrm{raw}}(t)\).
+        Load is not raised to the $0.3\,\mathrm{kW}$ rigid floor when
+        raw load is already below that floor.
+  \item \textbf{SOC physics.}
+        Charge and discharge use
+        \(\eta_{\mathrm{ch}}=\eta_{\mathrm{dis}}=\sqrt{\eta_{\mathrm{rt}}}\)
+        and mixed-pack \(SOC_{\min}=17.8\%\) (installed BOM).
+        The model never reports absolute $0\%$ SOC while
+        \(SOC_{\min}>0\).
+\end{enumerate}
+
+Figure~\ref{fig:crewai-dsr} (file
+\texttt{paper\_figures/fig\_crewai\_load\_curtailment.png})
+is plotted from
+\texttt{results/crewai\_adaptive\_vs\_passive.csv}.
+On archive days 40--42 the passive house records
+16 unserved hours (longest contiguous run 10\,h,
+$22.51\,\mathrm{kWh}$ deficit). The adaptive house records
+5 unserved hours (longest run 3\,h, $9.22\,\mathrm{kWh}$ deficit).
+Both traces rest on the same pack floor $SOC_{\min}=0.178$.
+We do \emph{not} claim a $0\%$ SOC collapse, a 32-hour blackout, a
+$9.2\%$ SOC hover, or a zero-outage winter. Those figures are not in
+the CSV.
+
+\subsection*{A.4 Independence statement}
+
+The student team specified the following and takes responsibility for them:
+\begin{itemize}
+  \item all continuum and algebraic physics (Hay--Davies POA, cell
+        temperature derating, SOC/SOH EFC aging, node power balance);
+  \item the mixed-integer linear program for pack counts \(x_k\) and
+        hourly EMS (SciPy HiGHS), including budget and LPSP;
+  \item techno-economic LCOS formulae and the budget Pareto-front scan;
+  \item the Summary Sheet narrative and every numeric claim copied from
+        \texttt{results/*.csv}.
+\end{itemize}
+Generative AI did not derive those equations. It did not choose the MILP
+constraint set. It did not write Summary Sheet numbers from memory.
+
+\subsection*{A.5 Attestation}
+
+\begin{flushleft}
+Team members / roles: \underline{\hspace{3.4in}}\\[1.15em]
+Contest control number: \underline{\hspace{1.4in}}
+\hfill Date: \underline{\hspace{1.4in}}
+\end{flushleft}

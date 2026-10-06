@@ -1,0 +1,5 @@
+model_name,units,capacity_kWh_each,power_kW_each,cost_usd_each,capacity_kWh_total,power_kW_total,capex_usd,chemistry,roundtrip_eff,budget_usd,tco_usd,lpsp,epsilon_lpsp_applied,lpsp_relaxed,outage_hours_year
+Tesla_Powerwall_Plus,0,13.5,5.0,10500.0,0.0,0.0,0.0,LFP,0.9,10000.0,157669.09730513263,0.24892479341974783,0.24892479341974783,True,2725.0
+Enphase_IQ_10T,0,10.08,3.84,8200.0,0.0,0.0,0.0,LFP,0.89,10000.0,157669.09730513263,0.24892479341974783,0.24892479341974783,True,2725.0
+FREEDOH_Module,3,5.0,2.5,2200.0,15.0,7.5,6600.0,LFP,0.85,10000.0,157669.09730513263,0.24892479341974783,0.24892479341974783,True,2725.0
+Lead_Carbon_Array,1,9.6,3.0,3100.0,9.6,3.0,3100.0,Lead-Carbon,0.78,10000.0,157669.09730513263,0.24892479341974783,0.24892479341974783,True,2725.0

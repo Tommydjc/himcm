@@ -1,0 +1,13 @@
+appliance_name,rated_power_W,daily_usage_hours,duty_cycle,peak_hours,priority_level,is_deferrable
+Refrigerator_Freezer,180,24.0,0.4,0-23,critical,False
+LED_Lighting_WholeHouse,120,5.0,1.0,18-23,high,False
+Well_Water_Pump,750,1.2,1.0,7-9_18-20,critical,False
+WiFi_Router_Comm,25,24.0,1.0,0-23,high,False
+Home_Office_Laptop,65,8.0,0.8,9-17,high,False
+Microwave_Oven,1200,0.5,1.0,7-8_12-13,medium,True
+Induction_Cooktop,1800,1.0,1.0,7-8_18-19,high,False
+Washing_Machine,500,0.8,1.0,10-14,medium,True
+Electric_Clothes_Dryer,2400,0.7,1.0,11-15,low,True
+Dishwasher,1200,1.0,1.0,20-22,low,True
+Heat_Pump_HVAC,2200,8.0,0.5,12-16_19-23,medium,True
+Electric_Water_Heater,2000,1.5,1.0,6-8_19-21,medium,True

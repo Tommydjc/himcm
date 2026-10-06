@@ -1,0 +1,11 @@
+{
+  "consensus_reached": true,
+  "shed_appliances": [
+    "Microwave_Oven",
+    "Electric_Clothes_Dryer",
+    "Dishwasher"
+  ],
+  "hvac_temp_offset_c": 0.0,
+  "negotiated_reduction_kW": 4.8,
+  "rationale": "These appliances are the least critical for immediate family comfort and essential operations, and the reduction will help maintain a cooler, safer environment while keeping the fridge and well pump operational."
+}

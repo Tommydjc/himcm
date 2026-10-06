@@ -100,11 +100,12 @@ sources:
 ## 5. 题包模块边界
 
 见 [`_template/README.md`](_template/README.md)。  
-`src/` 子结构按题型自定（2025：environment/planner/rl；2024：indicators/mcda/sensitivity；2023：physics/biology/simulation/theory/decision）。
+`src/` 子结构按题型自定（2025：environment/planner/rl；2024：indicators/mcda/sensitivity；2023：physics/biology/simulation/theory/decision；2021：generation/load/battery/optimization；2020：factor_analysis/llm_factor/entropy_weight/clustering/classification/web_app）。
 
 ---
 
 ## 6. Co-evolution
 
 新约定与本文件同一提交更新。课程流程：[`docs/course/weekly_loop.md`](docs/course/weekly_loop.md)。  
-2023 题包规则：[`2023_A_dandelion_prisms/.cursorrules`](2023_A_dandelion_prisms/.cursorrules) 与 [`.cursor/rules/2023-a-dandelion.mdc`](.cursor/rules/2023-a-dandelion.mdc)（只匹配该题包 glob，不覆盖根目录 2025 `.cursorrules`）。
+2023 题包规则：[`2023_A_dandelion_prisms/.cursorrules`](2023_A_dandelion_prisms/.cursorrules) 与 [`.cursor/rules/2023-a-dandelion.mdc`](.cursor/rules/2023-a-dandelion.mdc)（只匹配该题包 glob，不覆盖根目录 2025 `.cursorrules`）。  
+2020 题包规则：[`2020_A_summer_job_factor/.cursorrules`](2020_A_summer_job_factor/.cursorrules) 与 [`.cursor/rules/2020-a-summer-job.mdc`](.cursor/rules/2020-a-summer-job.mdc)（glob 仅 `2020_A_summer_job_factor/**`）。

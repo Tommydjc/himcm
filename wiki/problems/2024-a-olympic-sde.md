@@ -56,3 +56,5 @@ sources:
 - [两套宇宙](../concepts/two-universes.md)
 - [复现命令](../playbooks/2024-repro-eval.md)
 - [2032 排序 source](../sources/brisbane-2032-ranking.md)
+- [白皮书短页](2024-a-olympics.md)
+- [合成数据陷阱](../comparisons/synthetic-data-trap.md)

@@ -8,9 +8,12 @@ year: cross
 status: ingested
 sources:
   - STUDIES.md
+  - 2020_A_summer_job_factor/results/model_comparison_metrics.csv
+  - 2021_A_solar_storage/results/optimal_sizing_solution.csv
   - 2022_A_honeybee_dynamics/results/orchard_pollination_recommendation.csv
   - 2023_A_dandelion_prisms/results/monthly_metrics.csv
   - 2024_A_olympic_sde/results/brisbane_2032_ranking.csv
+  - 2025_A_evacuation/results/experiment_summary.csv
   - AGENTS.md
 ```
 
@@ -26,9 +29,17 @@ sources:
 
 2024 A 把 IOC 纲领收成七叶，用锁定 AHP–SAW 做回测与布里斯班短名单，再用 N=6 LOOCV 作弱分类对照。入口：[2024 问题](problems/2024-a-olympic-sde.md)、[AHP](methods/ahp-eigenvalue.md)、[SAW](methods/saw-topsis.md)。2032 决策叙事：Flag football SAW 第一（0.5360）；青年权=0 时逆转。不要用 logistic 均值把 Cricket 写成执委会终裁。
 
+## 离网储能 / 认知削负荷
+
+2021 A：8760 h + MILP 选型。现行 CSV：3× FREEDOH + 1× lead-carbon，capex \$9{,}700，LPSP 0.2489，停电 2725 h。CrewAI 只改 72 h 窗内负荷协议。入口：[2021 问题](problems/2021-a-solar-storage.md)、[CrewAI](methods/crewai-cognitive-demand-response.md)、[被动停电](comparisons/passive-blackout-fallacy.md)。
+
+## 问卷因子 / 岗位匹配
+
+2020 A：15 列是 `SYNTHETIC_FALLBACK`。KMO 0.445，\(m=3\) 方差 42.6%，熵权 \(w=(0.479,0.319,0.202)\)，LOOCV Top-1 0.20。入口：[2020 问题](problems/2020-a-summer-job.md)、[EFA](methods/factor-analysis-llmfactor.md)、[熵权](methods/entropy-weight-objective-scoring.md)、[合成数据](comparisons/synthetic-data-trap.md)。
+
 ## 仿真 / 搜救
 
-2025 A 是图上多智能体清扫（规划基线 + 可选 RL）。方法与清场秒数只存在于 `2025_A_evacuation/` Raw；本页不抄疏散数字。跨年结构见 [评价 vs 仿真](comparisons/evaluation-vs-simulation.md)。
+2025 A：规划器 office 2 体 \(t_{\mathrm{clear}}=135\)（`experiment_summary.csv`）。GAT–PPO 在 `src/rl/`，增益 `unverified`。入口：[2025 问题](problems/2025-a-evacuation.md)。跨年结构见 [评价 vs 仿真](comparisons/evaluation-vs-simulation.md)。
 
 ## 赛时
 
@@ -37,7 +48,10 @@ sources:
 ## Related
 
 - [目录](index.md)
-- [2022 问题](problems/2022-a-honeybee-dynamics.md)
-- [2023 问题](problems/2023-a-dandelion-prisms.md)
-- [2024 问题](problems/2024-a-olympic-sde.md)
+- [2025 问题](problems/2025-a-evacuation.md)
+- [2024 问题](problems/2024-a-olympics.md)
+- [2023 问题](problems/2023-a-dandelion.md)
+- [2022 问题](problems/2022-a-honeybee.md)
+- [2021 问题](problems/2021-a-solar-storage.md)
+- [2020 问题](problems/2020-a-summer-job.md)
 - [评价 vs 仿真](comparisons/evaluation-vs-simulation.md)
