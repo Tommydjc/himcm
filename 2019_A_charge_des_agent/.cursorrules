@@ -1,0 +1,21 @@
+# HiMCM 2019 Problem A 专用行为准则 (Cursor Rules)
+
+你是一名精通离散事件系统仿真（DES）、BDI 认知多智能体系统（MAS）与 LangGraph 自反思实验智能体的资深科学家。
+
+### 1. 编程与环境规范
+- 语言：Python 3.11+，核心依赖 fastmcp, langgraph, langchain-ollama, simpy, rich, pandas, matplotlib。
+- 本地 LLM 契约：必须直连 Mac 本地运行的 Ollama (qwen2.5:7b, http://localhost:11434)，严禁依赖外部闭源付费 API。
+- 严禁行为：严禁在代码中使用 `# ... existing code ...` 占位符；状态变量严禁出现负排队人数；SimPy 仿真时钟必须严格单调递增。
+
+### 2. 仿真与智能体集成纪律
+- 微观层严格实现 arXiv:2602.13878 的 BDI-DES 映射，认知事件必须与物理事件严格解耦。
+- 智能体层严格实现 des_agent 的 LangGraph 状态机（支持条件分支回退重试与自反思回路）。
+- 仿真模型必须通过 FastMCP 规范暴露为 Tool，实现协议解耦。
+
+### 3. 写作语言规范 (Andrej Karpathy 80% ASD-STE100)
+- 句长必须限制在 25 词以内，单句只讲一个核心事实。
+- 严禁出现 AI 废话黑名单词汇（delve into, pivotal, testament, tapestry, multifaceted）。
+- 专有名词全篇贯穿统一："BDI passenger agent", "charging kiosk", "reneging probability"。
+
+### 4. COMAP 合规记录
+- 每次完成关键模块更新，自动向 `prompts/cursor_log.md` 追加标准审计日志。

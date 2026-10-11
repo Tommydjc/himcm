@@ -1,0 +1,94 @@
+{
+  "current_params": {
+    "c_fast": 12,
+    "c_slow": 14,
+    "c_bank": 2
+  },
+  "simulation_results": {
+    "mean_wait_time": 0.0,
+    "max_queue_len": 0,
+    "max_system_load": 17,
+    "reneging_rate": 0.0,
+    "utilization_fast": 0.05718380769763572,
+    "utilization_slow": 0.25969376531638005,
+    "total_powerbank_rentals": 0,
+    "n_arrivals": 441,
+    "n_anxious": 110,
+    "n_seekers": 110,
+    "n_reneged": 0,
+    "n_served_fast": 37,
+    "n_served_slow": 73,
+    "n_abort": 0,
+    "total_passengers": 441,
+    "anxious_passengers": 110,
+    "served_fast": 37,
+    "served_slow": 73,
+    "served_powerbank": 0,
+    "reneged_passengers": 0,
+    "horizon_min": 960.0,
+    "lambda_base": 0.35,
+    "peak_multiplier": 3.0,
+    "pricing_mode": 1.0,
+    "scenario": null,
+    "c_fast": 12,
+    "c_slow": 14,
+    "c_bank": 2,
+    "seed": 42
+  },
+  "budget_valid": true,
+  "budget_info": {
+    "is_valid": true,
+    "total_cost": 47800.0,
+    "total_area": 38.6,
+    "violation_reason": "",
+    "budget_cap_usd": 80000.0,
+    "area_cap_m2": 40.0,
+    "cost_breakdown_usd": {
+      "fast": 24000.0,
+      "slow": 16800.0,
+      "bank": 7000.0
+    },
+    "area_breakdown_m2": {
+      "fast": 9.600000000000001,
+      "slow": 28.0,
+      "bank": 1.0
+    }
+  },
+  "reflection_trace": [
+    {
+      "engine": "rules",
+      "iteration": 0,
+      "params": {
+        "c_fast": 12,
+        "c_slow": 14,
+        "c_bank": 2
+      },
+      "kpis": {
+        "mean_wait_time": 0.0,
+        "reneging_rate": 0.0,
+        "utilization_fast": 0.05718380769763572,
+        "utilization_slow": 0.25969376531638005,
+        "max_queue_len": 0,
+        "max_system_load": 17
+      },
+      "morning_peak_congestion": false,
+      "slow_locker_underused": true,
+      "analysis": "Morning congestion=no; slow util=0.26; reneging=0.000; wait=0.00 min; max_system_load=17.",
+      "strategy": [
+        "Cut idle slow lockers to free area for fast chargers."
+      ]
+    }
+  ],
+  "iteration": 1,
+  "converged": true,
+  "error_message": "Converged: mean_wait=0.00 <= 5.0, reneging=0.000 <= 0.05.",
+  "budget_reject_count": 0,
+  "llm_mode": "rules",
+  "targets": {
+    "mean_wait_min": 5.0,
+    "reneging_rate": 0.05,
+    "budget_cap_usd": 80000.0,
+    "area_cap_m2": 40.0,
+    "max_iterations": 5
+  }
+}

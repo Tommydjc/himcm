@@ -1,0 +1,127 @@
+% HiMCM / COMAP AI Use Disclosure Report
+% Compile: pdflatex ai_disclosure.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{plain}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries COMAP AI Use Disclosure Report}\\[0.35em]
+{\large HiMCM 2019 Problem A --- Terminal Charging Kiosks}\\[0.25em]
+{\normalsize Team GoHiMCM}
+\end{center}
+
+\vspace{0.8em}
+\noindent
+This report documents artificial-intelligence assistance used while
+preparing our contest materials, in accordance with COMAP contest rules
+on AI disclosure.
+No AI system invented numerical results.
+All tables and figures come from local Python DES runs that write
+\texttt{results/*.csv} and \texttt{paper\_figures/*.png}.
+
+\section{Tools and scope}
+\begin{table}[htbp]
+  \centering
+  \small
+  \begin{tabular}{p{3.2cm}p{5.0cm}p{5.2cm}}
+    \toprule
+    Tool & Role & Contested artifacts touched \\
+    \midrule
+    Ollama (\texttt{qwen2.5:7b}), local
+      & Drafted pack proposals inside the LangGraph reflection loop
+        (\texttt{propose}$\to$\texttt{validate}$\to$\texttt{simulate}
+        $\to$\texttt{reflect}$\to$\texttt{check})
+      & \texttt{src/des\_agent/reflection\_agent.py};
+        \texttt{results/reflection\_*.json};
+        \texttt{results/autonomous\_planning\_summary.json} \\
+    LangGraph
+      & Orchestrated the self-reflection control flow and planning
+        subtasks
+      & \texttt{src/des\_agent/planning\_agent.py} \\
+    Cursor (AI coding agent)
+      & Assisted SimPy queue state-machine coding and FastMCP tool
+        wrappers
+      & \texttt{src/des\_env/airport\_sim.py};
+        \texttt{src/mcp\_server/server.py};
+        \texttt{src/bdi\_agents/passenger\_bdi.py} \\
+    Cursor
+      & Assisted Pareto densify scripts and figure wiring
+      & \texttt{src/optimization/pareto\_sizing.py};
+        \texttt{paper\_figures/} \\
+    Cursor
+      & Assisted LaTeX document shells and path wiring
+      & \texttt{paper/*.tex} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Interaction prompts that affected model or algorithm design were logged
+in \texttt{prompts/cursor\_log.md} for auditability.
+
+\section{Local generation of simulation data}
+\begin{enumerate}[leftmargin=1.4em]
+  \item All DES KPIs were produced on a local Python $3.10+$ environment
+        (SimPy + NumPy/Pandas/Matplotlib).
+  \item FastMCP tools call the same in-process DES functions used by
+        scripts; they do not fetch external contest data.
+  \item Ollama runs locally as \texttt{qwen2.5:7b}.
+        If Ollama is offline, a deterministic rule proposer continues.
+        The DES engine still executes every candidate pack.
+  \item Locked evidence includes
+        \texttt{stage2\_baseline\_metrics.csv},
+        \texttt{optimal\_kiosk\_sizing.csv},
+        \texttt{thunderstorm\_stress\_comparison.csv},
+        and the $300$\,DPI figures under \texttt{paper\_figures/}.
+\end{enumerate}
+
+\section{What the human team did independently}
+We attest that the following were conceived, specified, and signed off
+by the student team:
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Scientific design:} BDI passenger agent states, SimPy
+        resource pools, CapEx/area caps, storm injection rules, and
+        Pareto objectives.
+  \item \textbf{Acceptance criteria:} mean wait $\le 5$ minutes and
+        reneging probability $\le 0.05$.
+  \item \textbf{Summary Sheet:} narrative priorities and final one-page
+        claims.
+        Every numeric entry was typed from measured CSV outputs after
+        human inspection.
+        The Summary Sheet was completed independently by human teammates.
+  \item \textbf{Airport authority letter:} operational SOP language
+        (three-minute walk grid; free first $15$ minutes on the fast
+        kiosk; storm lane checklist) was completed independently by
+        human teammates.
+        AI assistance, if any, was limited to LaTeX layout only.
+\end{enumerate}
+
+\section{What AI assistance was used for}
+\begin{itemize}[leftmargin=1.4em]
+  \item Drafting SimPy process boilerplate and FastMCP tool signatures.
+  \item Driving LangGraph reflection / planning loops via local Ollama.
+  \item Generating initial LaTeX table/figure wiring tied to existing
+        CSV and PNG filenames.
+  \item Fixing pytest paths and small typing/docstring gaps.
+\end{itemize}
+
+\section{What AI was not used for}
+\begin{itemize}[leftmargin=1.4em]
+  \item Inventing or editing locked KPI cells in \texttt{results/}.
+  \item Fabricating storm or Pareto statistics for the Summary Sheet.
+  \item Submitting without human review of every reported number.
+\end{itemize}
+
+\section{Attestation}
+We confirm that this disclosure is complete to the best of our knowledge
+and that contest claims rest on locally executed simulation outputs.
+
+\vspace{1.2em}
+\noindent
+Team GoHiMCM \hfill Date: \underline{\hspace{3.5cm}}
+
+\end{document}

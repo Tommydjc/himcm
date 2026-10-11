@@ -1,0 +1,83 @@
+% One-page Summary Sheet. Numbers only from ../results/*.csv.
+% Compile: pdflatex summary_sheet.tex
+% Style: ~80% ASD-STE100 (one fact per sentence; <=25 words).
+\documentclass[11pt]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2019 Problem A --- Summary Sheet}\\[0.2em]
+{\small Team GoHiMCM \quad
+sources:
+\texttt{stage2\_baseline\_metrics.csv},
+\texttt{optimal\_kiosk\_sizing.csv},
+\texttt{thunderstorm\_stress\_comparison.csv},
+\texttt{autonomous\_planning\_summary.json}}
+\end{center}
+\vspace{0.35em}
+
+\noindent\textbf{Problem.}
+Size terminal charging kiosks under CapEx $\le\$80{,}000$ and area
+$\le 40\,\mathrm{m}^2$.
+Each traveler is a BDI passenger agent with SOC and boarding slack.
+Agents choose a fast kiosk, a slow locker, a power bank, or abort.
+
+\medskip
+\noindent\textbf{Model.}
+SimPy maps three resource pools: $65$\,W fast kiosk, $15$\,W locker,
+power-bank bank.
+Arrivals use a $16$-hour NHPP with three peaks.
+LangGraph + local Ollama (\texttt{qwen2.5:7b}) propose packs.
+FastMCP tools call the DES and check budget.
+Acceptance: mean wait $\le 5$ min; reneging probability $\le 0.05$.
+
+\medskip
+\noindent\textbf{Stage-2 baseline ($12/15/2$, normal day).}
+$n=441$ arrivals; $110$ anxious seekers.
+Mean wait $=0.00$ min.
+Reneging probability $=0.00$.
+Fast utilization $=5.72\%$; slow utilization $=24.24\%$.
+Max system load $=17$.
+
+\medskip
+\noindent\textbf{Pareto sizing (rush densify; reneging $\le 5\%$).}
+$216$ unique packs; $7$ non-dominated points.
+Knee under the $\$80{,}000$ line: pack $\mathbf{8/16/0}$.
+CapEx $=\mathbf{\$35{,}200}$ ($44\%$ of CapEx cap).
+Area $=38.4\,\mathrm{m}^2$.
+Rush mean wait $=0.0115$ min; reneging probability $=0.00$.
+Cheapest Pareto pack is $4/8/0$ (wait $5.91$ min).
+Knee wait is $0.0115$ min.
+Mean wait falls by $99.8\%$ between those packs.
+
+\medskip
+\noindent\textbf{Thunderstorm stress ($17{:}00$; $40\%$ delayed $2$--$4$ h;
+SOC drain $\times 2$; $n=621$).}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+KPI & Baseline $12/15/2$ & Knee $8/16/0$ \\
+\midrule
+CapEx (USD) & $49{,}000$ & $35{,}200$ \\
+Mean wait (min) & $4.591$ & $2.347$ \\
+Reneging probability & $0.0229$ & $0.0114$ \\
+Max wait-queue length & $6$ & $6$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.25em}
+Mean wait falls by $48.9\%$.
+Reneging probability falls by $50.3\%$.
+CapEx falls by $28.2\%$ versus the empirical pack.
+
+\medskip
+\noindent\textbf{Recommendation.}
+Install pack $8/16/0$ first.
+Keep CapEx headroom for gate-cluster add-ons.
+Offer a free first $15$ minutes on the fast kiosk to raise turnover.
+Re-run multi-seed storm tests before capital release.
+
+\end{document}

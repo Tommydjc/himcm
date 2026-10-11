@@ -1,0 +1,112 @@
+% Operations letter to terminal management (~1.5 pages).
+% Compile: pdflatex airport_authority_letter.tex
+% Style: plain management English; short sentences; real KPIs only.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{plain}
+\onehalfspacing
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Optimizing Terminal Passenger Charging Services:\\
+A Data-Driven Strategic Blueprint}\\[0.6em]
+{\normalsize Memorandum to the Airport Terminal Management Committee}\\[0.25em]
+{\small Team GoHiMCM \quad HiMCM 2019 Problem A study pack}\\[0.15em]
+{\small Evidence files: \texttt{optimal\_kiosk\_sizing.csv},
+\texttt{thunderstorm\_stress\_comparison.csv}}
+\end{center}
+
+\vspace{0.8em}
+\noindent
+Dear Members of the Committee,
+
+\medskip
+\noindent
+Passengers treat a charged phone as part of the journey product.
+Dead batteries raise missed-connection risk and desk complaints.
+We ran a local discrete-event model of charging kiosks for one
+$16$-hour day.
+We report only measured simulation outputs.
+
+\section*{What the model shows}
+CapEx is capped at $\$80{,}000$.
+Floor area is capped at $40\,\mathrm{m}^2$.
+A rush-day search evaluated $216$ packs.
+Seven packs remain on the Pareto front.
+The recommended knee pack is
+\textbf{8 fast kiosks / 16 slow lockers / 0 power-bank banks}.
+CapEx is $\$35{,}200$.
+That CapEx uses $44\%$ of the CapEx ceiling.
+Floor use is $38.4\,\mathrm{m}^2$.
+Rush mean wait is $0.0115$ minutes.
+Rush reneging probability is $0.00$.
+
+We injected a thunderstorm delay at $17{:}00$.
+Forty percent of later departures gained $2$--$4$ hours of delay.
+Phone drain doubled for delayed travelers.
+The run has $n=621$ arrivals.
+The empirical pack is $12/15/2$ at CapEx $\$49{,}000$.
+The knee cut mean wait from $4.591$ to $2.347$ minutes.
+That is a $48.9\%$ wait cut.
+Reneging probability fell from $0.0229$ to $0.0114$.
+That is a $50.3\%$ reneging cut.
+CapEx fell by $28.2\%$.
+Peak wait-queue length stayed at $6$ for both packs.
+
+\section*{Standard operating procedures (SOP)}
+\begin{enumerate}
+  \item \textbf{Three-minute walk grid.}
+  Place charging kiosks so every gate cluster is within a three-minute
+  walk.
+  Prefer corridor nodes that serve two gates.
+  Do not stack all fast kiosks at one retail island.
+
+  \item \textbf{Hardware mix for Phase 1.}
+  Procure pack $8/16/0$ first.
+  Keep $\$44{,}800$ of CapEx headroom under the $\$80{,}000$ cap.
+  Use headroom only after a second storm-seed review.
+
+  \item \textbf{Free first 15 minutes on the fast kiosk.}
+  Post a clear tariff: first $15$ minutes free on the fast kiosk;
+  meter thereafter.
+  The free window raises turnover and cuts abandoned waits.
+  Keep slow lockers as the long-dwell product.
+
+  \item \textbf{Storm playbook after $17{:}00$.}
+  When Ops declares a weather delay, open a temporary phone-charging
+  lane at the largest hold room.
+  Staff one attendant to load-balance fast kiosks and slow lockers.
+  Publish queue status on gate screens every $10$ minutes.
+
+  \item \textbf{Power-bank policy.}
+  Phase 1 does not require power-bank banks at the knee pack.
+  If retail demands banks, add them only where gate dwell exceeds
+  $90$ minutes and CapEx remains under the cap.
+
+  \item \textbf{Monthly KPI board.}
+  Track mean wait, reneging probability, and peak queue length.
+  Trigger a re-size review if reneging probability exceeds $5\%$
+  for two consecutive peak weeks.
+\end{enumerate}
+
+\section*{Ask of the Committee}
+Approve Phase~1 procurement of pack $8/16/0$.
+Authorize the free-$15$-minute fast-kiosk tariff pilot for $90$ days.
+Direct Ops to draft the $17{:}00$ storm lane checklist before the next
+severe-weather season.
+
+\medskip
+\noindent
+We can supply the locked CSV tables and figures on request.
+All figures are $300$\,DPI outputs from the same local Python runs.
+
+\bigskip
+\noindent
+Respectfully,\\[0.6em]
+GoHiMCM Study Team\\
+Airport Charging Resilience Workstream
+
+\end{document}

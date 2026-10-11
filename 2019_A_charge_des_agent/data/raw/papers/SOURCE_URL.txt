@@ -1,0 +1,5 @@
+source: https://arxiv.org/abs/2602.13878
+pdf: https://arxiv.org/pdf/2602.13878.pdf
+title: Testing BDI-based Multi-Agent Systems using Discrete Event Simulation
+authors: Martina Baiardi, Samuele Burattini, Giovanni Ciatto, Danilo Pianini
+downloaded: 2026-10-11T02:09Z

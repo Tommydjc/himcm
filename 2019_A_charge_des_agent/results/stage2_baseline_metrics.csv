@@ -1,0 +1,2 @@
+total_passengers,anxious_passengers,served_fast,served_slow,served_powerbank,reneged_passengers,reneging_rate,mean_wait_time,max_queue_len,max_system_load,utilization_fast,utilization_slow,n_seekers,c_fast,c_slow,c_bank,pricing_mode,seed,horizon_min,lambda_base,peak_multiplier,scenario
+441,110,37,73,0,0,0.0,0.0,0,17,0.05718380769763572,0.24238084762862142,110,12,15,2,1.0,42,960.0,0.35,3.0,normal
