@@ -43,10 +43,13 @@ sources:
 
 ## 赛时
 
-读 [index](index.md) → 复制 `_template/` 建新年目录 → 在新目录建模 → 当年 `prompts/cursor_log.md` 记 AI → 不改旧年论文交差。
+读 [Contest Hub](playbooks/contest-hub.md) → [题型路由](playbooks/problem-type-router.md) → 复制 `_template/` 建新年目录 → 在新目录建模 → 当年 `prompts/cursor_log.md` 记 AI → 交卷前 [证据门闩](playbooks/evidence-gate.md) → 不改旧年论文交差。
+
+旁路（可选）：[Remit](playbooks/remit-assisted-loop.md) · [MM-Agent](playbooks/mm-agent-assisted-loop.md)（许可默认 BLOCKED）· [Lean](playbooks/lean-lemma-loop.md)。栈职责见 [agent-stack-roles](comparisons/agent-stack-roles.md)。
 
 ## Related
 
+- [Contest Hub](playbooks/contest-hub.md)
 - [目录](index.md)
 - [2025 问题](problems/2025-a-evacuation.md)
 - [2024 问题](problems/2024-a-olympics.md)

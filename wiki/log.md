@@ -10,6 +10,10 @@ sources:
   - AGENTS.md
 ```
 
+## [2026-10-08] playbook | P0–P4 Agent 栈与赛时 Hub
+
+写入 Contest Hub、题型路由 A–F、跨年失败模式、Agent 栈职责、Remit/MM/Lean/证据门闩 playbook；新增 `tools/remit_bridge/`、`tools/mm_bridge/`（许可默认 BLOCKED）、`tools/evidence_check.py`；`_template/formal/` 与 `paper/notes/`、`prompts/cursor_log.md` 空壳。刷新 `wiki/index.md`、`synthesis.md`、根 `STUDIES.md`。未改任一年 `results/*.csv`。
+
 ## [2026-10-06] ingest | 2020–2025 全量 Wiki 归档
 
 只读六年题包 Raw，未改任何 `results/*.csv`。新建用户规格 kebab 页：`problems/2025-a-evacuation.md`、`2024-a-olympics.md`、`2023-a-dandelion.md`、`2022-a-honeybee.md`、`2021-a-solar-storage.md`、`2020-a-summer-job.md`；methods 五页；playbooks 三页；comparisons 三页；sources 2020/2021/2025。保留已 ingest 的 `2022-a-honeybee-dynamics` / `2023-a-dandelion-prisms` / `2024-a-olympic-sde` 细页并 Related 互指。刷新 `wiki/index.md`、`wiki/synthesis.md`、根目录 `STUDIES.md`。

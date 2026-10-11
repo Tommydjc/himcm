@@ -64,9 +64,14 @@ Playbook：[4h](wiki/playbooks/4h-combat-playbook.md) · [Cursor 规格](wiki/pl
 
 | 文件 | 用途 |
 | --- | --- |
-| [wiki/index.md](wiki/index.md) | 赛时 / Query **先读** |
+| [wiki/playbooks/contest-hub.md](wiki/playbooks/contest-hub.md) | 赛时总控台 **先读** |
+| [wiki/playbooks/problem-type-router.md](wiki/playbooks/problem-type-router.md) | 题型模式 A–F 路由 |
+| [wiki/index.md](wiki/index.md) | 完整目录 / Query |
 | [wiki/synthesis.md](wiki/synthesis.md) | 跨年方法总论 |
 | [wiki/log.md](wiki/log.md) | Ingest / Query / Lint 时间线 |
+| [tools/remit_bridge/README.md](tools/remit_bridge/README.md) | Remit 旁路契约 |
+| [tools/mm_bridge/README.md](tools/mm_bridge/README.md) | MM-Agent 许可门闩 |
+| [tools/evidence_check.py](tools/evidence_check.py) | 论文数字 ⊆ CSV 抽检 |
 | [docs/course/weekly_loop.md](docs/course/weekly_loop.md) | 每周课堂闭环 |
 
 ---

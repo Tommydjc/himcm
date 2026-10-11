@@ -74,9 +74,10 @@ sources:
 
 ### Query
 
-1. 先读 `wiki/index.md`（必要时 `synthesis.md`）。  
+1. 赛时先读 `wiki/playbooks/contest-hub.md` 与 `problem-type-router.md`；平时 Query 先读 `wiki/index.md`（必要时 `synthesis.md`）。  
 2. 打开 3–8 页，带引用回答；核对数字时回题包 raw。  
-3. 好答案可 save 为 comparison/playbook + log。
+3. 好答案可 save 为 comparison/playbook + log。  
+4. 外部 Agent（Remit / MM-Agent）旁路见 `tools/remit_bridge/`、`tools/mm_bridge/`；MM 默认许可 `BLOCKED`。权威 CSV 禁止自动覆盖。
 
 **赛时协议：** 读 Wiki → 复制 `_template/` 建**新**题目录 → 在新目录建模 → AI 写入**当年** `prompts/cursor_log.md` → 不改旧年论文交差。
 
