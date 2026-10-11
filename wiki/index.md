@@ -1,6 +1,6 @@
 # Wiki 目录
 
-GoHiMCM 知识库入口。赛时 / Query 先读本页，再打开 3–8 篇子页；对数字时回题包 `results/*.csv`。
+GoHiMCM 知识库入口。赛时先读 **Contest Hub**；平时 Query 可扫本页全文，再打开 3–8 篇子页；对数字时回题包 `results/*.csv`。
 
 ```yaml
 type: index
@@ -16,6 +16,18 @@ sources:
   - 2024_A_olympic_sde/results/brisbane_2032_ranking.csv
   - 2025_A_evacuation/results/experiment_summary.csv
 ```
+
+## 赛时入口（P0–P4）
+
+- **[Contest Hub](playbooks/contest-hub.md)** — 开赛总控台（先读）
+- [题型路由 A–F](playbooks/problem-type-router.md) — 模式 → 基线
+- [跨年失败模式](concepts/cross-year-failure-modes.md) — 禁令自检
+- [Agent 栈职责](comparisons/agent-stack-roles.md) — Wiki / Remit / MM / Lean
+- [Remit 旁路](playbooks/remit-assisted-loop.md) · 桥接 `tools/remit_bridge/`
+- [证据门闩](playbooks/evidence-gate.md) · `python tools/evidence_check.py --slug …`
+- [MM-Agent 旁路](playbooks/mm-agent-assisted-loop.md) · 许可门闩 `tools/mm_bridge/LICENSE_GATE.md`（默认 BLOCKED）
+- [HMML 映射](comparisons/hmml-vs-gohimcm.md)
+- [形式化边界](concepts/formal-methods-boundary.md) · [Lean 引理](playbooks/lean-lemma-loop.md)
 
 ## 题（白皮书短页 + 已 ingest 细页）
 
@@ -58,6 +70,8 @@ sources:
 
 ## 概念
 
+- [跨年失败模式](concepts/cross-year-failure-modes.md)
+- [形式化边界](concepts/formal-methods-boundary.md)
 - [IOC 六块与七叶](concepts/ioc-six-plus-xlsx.md)
 - [两套宇宙](concepts/two-universes.md)
 - [2022 失败模式](concepts/2022-a-failure-modes.md)
@@ -67,7 +81,13 @@ sources:
 
 ## Playbook
 
+- [Contest Hub](playbooks/contest-hub.md)
+- [题型路由 A–F](playbooks/problem-type-router.md)
 - [4h 交卷](playbooks/4h-combat-playbook.md)
+- [Remit 旁路](playbooks/remit-assisted-loop.md)
+- [证据门闩](playbooks/evidence-gate.md)
+- [MM-Agent 旁路](playbooks/mm-agent-assisted-loop.md)
+- [Lean 引理](playbooks/lean-lemma-loop.md)
 - [规格驱动 Cursor](playbooks/spec-driven-cursor-coding.md)
 - [ASD-STE100 写作](playbooks/asd-ste100-academic-writing.md)
 - [2022 研究闭环](playbooks/2022-a-study-loop.md)
@@ -117,6 +137,8 @@ sources:
 
 ## 对照与总览
 
+- [Agent 栈职责](comparisons/agent-stack-roles.md)
+- [HMML 映射](comparisons/hmml-vs-gohimcm.md)
 - [评价 vs 仿真](comparisons/evaluation-vs-simulation.md)
 - [合成数据陷阱](comparisons/synthetic-data-trap.md)
 - [Notebook vs 模块](comparisons/notebook-hell-vs-modular.md)
@@ -127,6 +149,8 @@ sources:
 
 ## Related
 
+- [Contest Hub](playbooks/contest-hub.md)
+- [题型路由](playbooks/problem-type-router.md)
 - [2025 问题](problems/2025-a-evacuation.md)
 - [2024 问题](problems/2024-a-olympics.md)
 - [2023 问题](problems/2023-a-dandelion.md)

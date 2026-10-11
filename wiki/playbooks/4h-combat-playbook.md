@@ -31,6 +31,9 @@ sources:
 
 ## Related
 
+- [Contest Hub](contest-hub.md)
+- [题型路由](problem-type-router.md)
+- [证据门闩](evidence-gate.md)
 - [规格驱动编码](spec-driven-cursor-coding.md)
 - [COMAP 披露](../concepts/comap-ai-disclosure.md)
 - [2025 疏散](../problems/2025-a-evacuation.md)

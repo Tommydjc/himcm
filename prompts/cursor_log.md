@@ -66,7 +66,13 @@
 - **解决的关键问题**：解析 \(145\,\mathrm{s}\) 与仿真 \(135\,\mathrm{s}\) 对照；无烟人员拐点与浓烟 \(\eta\) 置信区间均来自 420 次运行，不手填。
 - **产出文件**：`paper/himcm_paper.tex`
 
+## 2026-10-08 — P0–P4 赛时 Hub 与开源 Agent 旁路
 
-
-
+- **核心 Prompt**：按优先级落地 Contest Hub / 题型路由 → Remit 旁路 → 证据门闩 → MM 许可门闩 → Lean 可选边界；融合 Remit、MM-Agent、Lean 理念且不改权威 CSV。
+- **解决的关键问题**：
+  1. 赛时入口从厚目录收成 Hub + 模式 A–F 路由 + 跨年禁令。
+  2. Remit / MM-Agent 以仓外桥接接入；MM 默认 `LICENSE_GATE=BLOCKED`。
+  3. `evidence_check.py` 抽检论文高信号数字是否出现在 `results/**/*.csv`。
+  4. Lean 仅作窄引理可选路径，与 CSV 经验证据分列。
+- **产出文件**：`wiki/playbooks/contest-hub.md`、`problem-type-router.md`、`remit-assisted-loop.md`、`evidence-gate.md`、`mm-agent-assisted-loop.md`、`lean-lemma-loop.md`；`wiki/concepts/cross-year-failure-modes.md`、`formal-methods-boundary.md`；`wiki/comparisons/agent-stack-roles.md`、`hmml-vs-gohimcm.md`；`tools/remit_bridge/`、`tools/mm_bridge/`、`tools/evidence_check.py`；`_template/formal/`、`_template/paper/notes/`、`_template/prompts/cursor_log.md`
 

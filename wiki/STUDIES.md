@@ -1,6 +1,6 @@
 # STUDIES 镜像说明
 
-十年题包状态以仓库根目录 [`../STUDIES.md`](../STUDIES.md) 为准。赛时入口：[`index.md`](index.md)。
+十年题包状态以仓库根目录 [`../STUDIES.md`](../STUDIES.md) 为准。赛时入口：[`playbooks/contest-hub.md`](playbooks/contest-hub.md)；完整目录：[`index.md`](index.md)。
 
 ```yaml
 type: source

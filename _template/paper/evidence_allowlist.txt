@@ -1,0 +1,3 @@
+# Non-result numeric tokens allowed to appear in paper without matching results/*.csv
+# One token per line. Do NOT list decision metrics (t_clear, SAW scores, LPSP, ...).
+# Examples: geometry (1.0), assumed speeds, pagination constants.

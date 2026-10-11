@@ -82,11 +82,11 @@ Python 3.10+；函数与类要有 Type Hints 与 Docstring；禁止用省略号�
 
 ### Query
 
-先读 `wiki/index.md`，回答必须带相对链接引用。稳定的好答案可落成 `comparison` 或 `playbook`。
+赛时先读 `playbooks/contest-hub.md` 与 `problem-type-router.md`；平时先读 `index.md`。回答必须带相对链接引用。稳定的好答案可落成 `comparison` 或 `playbook`。外部 Agent 旁路见仓根 `tools/remit_bridge/`、`tools/mm_bridge/`（MM 许可默认 BLOCKED）。
 
 ### Lint
 
-运行 `PYTHONPATH=. python tools/wiki_lint.py`。检查：孤儿页、断链、无 `sources` 的数字、playbook 不可执行。
+检查：孤儿页、断链、无 `sources` 的数字、playbook 不可执行。交卷前可跑 `python tools/evidence_check.py --slug YYYY_P_slug --strict`。
 
 ## 6. 已有题包
 
