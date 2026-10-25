@@ -1,0 +1,62 @@
+% COMAP AI use disclosure for HiMCM 2018 Problem B.
+% Compile: pdflatex ai_disclosure.tex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,enumitem,hyperref}
+\newcommand{\TeamNumber}{GoHiMCM}
+\title{\textbf{AI Use Disclosure Report}\\[0.25em]
+\large HiMCM 2018 Problem B --- Team \TeamNumber}
+\author{}\date{25 October 2026}
+\begin{document}
+\maketitle
+
+\section{Purpose}
+This report lists AI tools used while building AeroTherm-MPC.
+It follows COMAP guidance on transparent AI disclosure.
+Human teammates remain responsible for all submitted claims.
+
+\section{Tools and roles}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.35em]
+  \item \textbf{Cursor (Composer agent).}
+  Assisted Python modules for the 2R2C thermal network ODEs,
+  prediction matrices, and SciPy model predictive control (MPC) solver.
+  Also drafted LaTeX structure under human review.
+  \item \textbf{Local Ollama (\texttt{qwen2.5:7b}).}
+  Designed for multi-inhabitant thermal preference dialogue
+  in \texttt{cognitive\_thermostat.py}.
+  Agents include EMS, senior, and parent personas.
+  The locked dialogue file records a Mock fallback when Ollama was offline.
+  The code path still prefers live Ollama when \texttt{localhost:11434} responds.
+  \item \textbf{No cloud LLM for numeric invention.}
+  KPI tables cite only local CSV/JSON under \texttt{results/}.
+\end{itemize}
+
+\section{What AI did not do}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.35em]
+  \item AI did not fabricate locked simulation numbers.
+  \item AI did not replace human judgment on design rules.
+  \item The Summary Sheet numeric cells were checked against locked files by teammates.
+  \item The homeowner advisory letter was edited by teammates for public clarity.
+\end{itemize}
+
+\section{Human verification checklist}
+\begin{enumerate}[leftmargin=1.2em,itemsep=0.25em]
+  \item Re-ran teaching Bang-Bang and MPC day scripts locally.
+  \item Confirmed \texttt{bang\_vs\_mpc\_summary.json} matches Table~1 in the paper.
+  \item Confirmed \texttt{harness\_benchmark\_results.csv} matches the harness table.
+  \item Confirmed \texttt{agent\_thermostat\_dialogue.json} matches Section~6 claims.
+  \item Confirmed paper figures under \texttt{paper\_figures/} are 300\,DPI exports
+        from those runs.
+\end{enumerate}
+
+\section{Prompt log pointer}
+Detailed Cursor interactions are appended in
+\texttt{prompts/cursor\_log.md}.
+That log is the machine-readable companion to this disclosure.
+
+\section{Statement}
+All numerical control results in the paper come from local Python simulations.
+AI tools assisted code and drafting only.
+Final responsibility rests with Team \TeamNumber.
+
+\end{document}

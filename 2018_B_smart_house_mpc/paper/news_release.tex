@@ -1,0 +1,94 @@
+% Requirement 3: one-page non-technical AP-style News Release.
+% Teaching numbers from bang_vs_mpc_summary.json.
+% Compile: pdflatex news_release.tex
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{setspace}
+\pagestyle{empty}
+\setstretch{1.08}
+\begin{document}
+
+\noindent\textbf{FOR IMMEDIATE RELEASE}
+\hfill
+\begin{minipage}[t]{0.42\textwidth}
+\raggedleft
+\small
+\textbf{Media Contact:}\\
+Alex Rivera, Communications Lead\\
+GoHiMCM AeroTherm Team\\
+press@gohimcm.example\\
++1 (617) 555-0198
+\end{minipage}
+
+\vspace{1.0em}
+\begin{center}
+{\Large\bfseries AeroTherm Home Climate System Ends Manual Thermostat Wars}\\[0.35em]
+{\large\itshape New controller shifts cooling before peak rates and
+slashes needless compressor starts---even on a brutal summer day}
+\end{center}
+
+\vspace{0.7em}
+\noindent
+BOSTON, MA --- October 25, 2018 --- GoHiMCM today unveiled
+\textbf{AeroTherm}, a next-generation home climate system designed for
+real life: late trains, surprise returns, and households that never agree
+on the thermostat.
+
+\medskip
+\noindent
+Programmable thermostats still demand fixed schedules.
+Many ``learning'' devices also stumble when routines break or roommates
+clash.
+AeroTherm treats the house walls as a thermal battery.
+It pre-cools before expensive afternoon rates, then eases off when prices spike.
+When you open the door, the room is already in the comfort band.
+
+\medskip
+\noindent
+The system also treats air as more than temperature.
+It can track humidity and airborne irritants such as pollen and fine particles.
+It keeps indoor humidity away from the high-moisture zone where dust mites
+and mold thrive.
+A medical-grade filtration mode raises purification when outdoor air is
+dirty, instead of pulling unfiltered air indoors.
+
+\medskip
+\noindent
+In a locked 24-hour summer teaching benchmark against a classic on/off
+thermostat, AeroTherm cut the utility bill by \textbf{4.2\%} and
+on-peak cooling energy by \textbf{15.8\%}.
+Compressor starts fell from 42 to 3.
+Peak-period electricity share dropped from 43.2\% of the day's bill to 38.0\%.
+Mean indoor temperature stayed near $23^\circ\mathrm{C}$.
+
+\medskip
+\noindent
+``A truly smart home should not force you to live like a clockwork robot
+just to save on utility bills,'' said Dr.\ Maya Chen, AeroTherm chief
+scientist.
+``Families deserve comfort that arrives with them---and air that stays
+safe for kids with allergies.''
+
+\medskip
+\noindent
+For larger homes, AeroTherm zones rooms with smart dampers.
+Empty rooms become gentle thermal buffers instead of wasted full cooling.
+Household preference conflicts are settled by a fairness bargain that
+gives extra weight to allergy-sensitive residents.
+
+\medskip
+\noindent
+{\small
+\textbf{About GoHiMCM AeroTherm Team.}
+GoHiMCM is a student research team building open, auditable models for
+contest-grade home energy and indoor-air problems.
+Simulation evidence for this release is archived in locked CSV and JSON
+files from local Python runs (\texttt{bang\_vs\_mpc\_summary.json}).
+}
+
+\vspace{1.2em}
+\begin{center}
+\#\#\#
+\end{center}
+
+\end{document}

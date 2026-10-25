@@ -1,0 +1,11 @@
+{
+  "currency": "USD",
+  "unit": "USD_per_kWh",
+  "timezone_note": "Local civil hour 0-23; peak aligned with afternoon HVAC stress.",
+  "periods": [
+    {"name": "off_peak", "hours": [0, 1, 2, 3, 4, 5, 6, 22, 23], "rate": 0.08},
+    {"name": "mid_peak", "hours": [7, 8, 9, 10, 11, 12, 13, 19, 20, 21], "rate": 0.14},
+    {"name": "on_peak", "hours": [14, 15, 16, 17, 18], "rate": 0.32}
+  ],
+  "surge_multiplier_default": 1.0
+}

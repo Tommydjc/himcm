@@ -10,6 +10,8 @@
 
 | 目录 | 年份·题 | 题型 | Wiki problem | 状态 |
 | --- | --- | --- | --- | --- |
+| [2018_B_smart_house_mpc/](2018_B_smart_house_mpc/) | 2018 B Cozy Smart House | 2R2C + MPC + Harness + MAS | [2018-b-smart-house](wiki/problems/2018-b-smart-house.md) | ingested |
+| [2019_A_charge_des_agent/](2019_A_charge_des_agent/) | 2019 A Airport charging | BDI–DES + Pareto + LangGraph | [2019-a-airport-charging](wiki/problems/2019-a-airport-charging.md) | ingested |
 | [2025_A_evacuation/](2025_A_evacuation/) | 2025 A Evacuation Sweeps | 仿真 / 图 MDP / 规划+RL | [2025-a-evacuation](wiki/problems/2025-a-evacuation.md) | ingested |
 | [2024_A_olympic_sde/](2024_A_olympic_sde/) | 2024 A Olympic SDE | 评价 / MCDM + ML 互证 | [2024-a-olympics](wiki/problems/2024-a-olympics.md) · [细页](wiki/problems/2024-a-olympic-sde.md) | ingested |
 | [2023_A_dandelion_prisms/](2023_A_dandelion_prisms/) | 2023 A Dandelions | 机理 / 空间扩散 | [2023-a-dandelion](wiki/problems/2023-a-dandelion.md) · [细页](wiki/problems/2023-a-dandelion-prisms.md) | ingested |
@@ -29,17 +31,17 @@ Copy-Item -Recurse _template YYYY_P_slug
 
 ## 技能树全景矩阵
 
-| 技能 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 评价 / 权重 | 熵权 | LCOS | 果园 OR | SAW 影响因子 | AHP–SAW | 规划器评分 |
-| 统计 / 小样本 | EFA / LOOCV | MCMC 负荷 | Autograd \(S_\theta\) | KPP 校核 | N=6 LOOCV | 重复 \(t_{\mathrm{clear}}\) |
-| 空间 / 图 | — | 8760 时序 | 日步 ODE | Conv2D CA | — | 房间图 |
-| 可微 / 优化 | MLP LOOCV | 选型 MILP | DFM–Torch | — | — | GAT–PPO（代码） |
-| 多智能体 | — | CrewAI DSR | — | — | — | 2–5 搜救体 |
-| LLM 语义 | LLMFactor | 本地谈判 | — | — | — | — |
-| 数据纪律 | SYNTHETIC_FALLBACK | CSV>论文草稿 | Torch≠Khoury | 周步≠日步 | ML≠终裁 | 发现≠救出 |
+| 技能 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 评价 / 权重 | Harness M1–M4 | CapEx–Wait Pareto | 熵权 | LCOS | 果园 OR | SAW 影响因子 | AHP–SAW | 规划器评分 |
+| 统计 / 小样本 | — | NHPP 到达 | EFA / LOOCV | MCMC 负荷 | Autograd \(S_\theta\) | KPP 校核 | N=6 LOOCV | 重复 \(t_{\mathrm{clear}}\) |
+| 空间 / 图 | 单区→多区附录 | 航站资源池 | — | 8760 时序 | 日步 ODE | Conv2D CA | — | 房间图 |
+| 可微 / 优化 | 预测矩阵 MPC | 网格 DES | MLP LOOCV | 选型 MILP | DFM–Torch | — | — | GAT–PPO（代码） |
+| 多智能体 | 认知温控 MAS | BDI 旅客 | — | CrewAI DSR | — | — | — | 2–5 搜救体 |
+| LLM 语义 | Ollama/Mock 协商 | LangGraph 反思 | LLMFactor | 本地谈判 | — | — | — | — |
+| 数据纪律 | Teaching≠Legacy | 弃排过滤膝点 | SYNTHETIC_FALLBACK | CSV>论文草稿 | Torch≠Khoury | 周步≠日步 | ML≠终裁 | 发现≠救出 |
 
-方法入口：[EFA](wiki/methods/factor-analysis-llmfactor.md) · [熵权](wiki/methods/entropy-weight-objective-scoring.md) · [CrewAI](wiki/methods/crewai-cognitive-demand-response.md) · [Autograd](wiki/methods/pytorch-autograd-sensitivity.md) · [Conv2D](wiki/methods/conv2d-spatiotemporal-ca.md) · [AHP](wiki/methods/ahp-eigenvalue.md)
+方法入口：[EFA](wiki/methods/factor-analysis-llmfactor.md) · [熵权](wiki/methods/entropy-weight-objective-scoring.md) · [CrewAI](wiki/methods/crewai-cognitive-demand-response.md) · [Autograd](wiki/methods/pytorch-autograd-sensitivity.md) · [Conv2D](wiki/methods/conv2d-spatiotemporal-ca.md) · [AHP](wiki/methods/ahp-eigenvalue.md) · [BDI–DES](wiki/methods/bdi-des-airport-charging.md) · [MPC](wiki/methods/2r2c-prediction-matrix-mpc.md)
 
 Playbook：[4h](wiki/playbooks/4h-combat-playbook.md) · [Cursor 规格](wiki/playbooks/spec-driven-cursor-coding.md) · [STE100](wiki/playbooks/asd-ste100-academic-writing.md)
 
@@ -51,6 +53,8 @@ Playbook：[4h](wiki/playbooks/4h-combat-playbook.md) · [Cursor 规格](wiki/pl
 
 | 年 | 锚点 | 路径 |
 | --- | --- | --- |
+| 2018 | MPC 成本 −4.2%、峰电 −15.8%、启停 42→3 | `2018_B_smart_house_mpc/results/bang_vs_mpc_summary.json` |
+| 2019 | 膝点 8/16/0 \$35.2k；雷暴等待 −48.9% | `2019_A_charge_des_agent/results/optimal_kiosk_sizing.csv` |
 | 2025 | office 2-agent \(t_{\mathrm{clear}}=135\) | `2025_A_evacuation/results/experiment_summary.csv` |
 | 2024 | Flag SAW 0.5360 | `2024_A_olympic_sde/results/brisbane_2032_ranking.csv` |
 | 2023 | 温带 12 月 cover 0.4511 | `2023_A_dandelion_prisms/results/monthly_metrics.csv` |

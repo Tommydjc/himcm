@@ -1,0 +1,28 @@
+{
+  "n_rows": 10,
+  "scenarios": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "controllers": [
+    "bang_bang",
+    "mpc"
+  ],
+  "by_controller": {
+    "bang_bang": {
+      "mean_M1_cost_usd": 2.426751970936367,
+      "mean_M2_discomfort_Ch": 7.3796626845377915,
+      "mean_M3_mechanical": 77.6,
+      "M4_cost_variance": 0.8650456068558169
+    },
+    "mpc": {
+      "mean_M1_cost_usd": 2.339640263830642,
+      "mean_M2_discomfort_Ch": 8.574061342046841,
+      "mean_M3_mechanical": 6.4,
+      "M4_cost_variance": 0.8735032654224888
+    }
+  }
+}

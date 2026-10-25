@@ -13,3 +13,4 @@
 | 2026-10-11 | Pareto 前沿 + 雷暴延误压力测试与三图 | `src/optimization/pareto_sizing.py`；`airport_sim` storm 注入 | CapEx–Wait 非支配排序；17:00 40% 延误 2–4h+电量减半；fig_pareto/stress/sankey 300DPI |
 | 2026-10-11 | Pareto 膝点修正：弃排≤5% 过滤 | `pareto_sizing.py`；`test_pareto_sizing.py` | 纯双目标会塌到 4/0/0；服务可行集上再取 $80k 膝点；网格跳过 <4 桩退化包 |
 | 2026-10-11 | LaTeX 论文套件（STE100 + 真实 KPI） | `paper/himcm_paper.tex`；`summary_sheet.tex`；`airport_authority_letter.tex`；`ai_disclosure.tex` | 六章主文+1页摘要+管理信+AI披露；数字只引自 results CSV；术语统一 BDI/fast kiosk/reneging |
+| 2026-10-25 | Wiki ingest 2019 A | `wiki/problems/2019-a-airport-charging.md` 等 + STUDIES/router 模式 H | 只读 Raw；膝点 8/16/0 与雷暴 −48.9% 入库 |

@@ -1,0 +1,85 @@
+{
+  "horizon_hours": 36,
+  "free_float": {
+    "final_T_in": 38.64524612507702,
+    "peak_RH_pct": 57.057295202217894,
+    "peak_C_pol": 20.0,
+    "final_C_pol": 6.621027015680346
+  },
+  "vs_programmable_energy_pct": 64.99109256686909,
+  "vs_nest_energy_pct": 64.59465368789654,
+  "vs_programmable_cost_pct": 63.09534375438551,
+  "vs_nest_cost_pct": 62.4690417092371,
+  "vs_nest_discomfort_pct": 86.91469552133266,
+  "vs_nest_allergen_hours_pct": null,
+  "bargain": {
+    "T_set_C": 22.75,
+    "RH_set_pct": 42.0,
+    "nash_log": 18.64749717626367,
+    "source": "asymmetric_nash",
+    "front_size": 525,
+    "nash_social_discomfort": 17.613749999999996
+  },
+  "benchmarks": [
+    {
+      "controller": "programmable",
+      "energy_kwh": 77.77132681822681,
+      "cost_usd": 10.900062889006811,
+      "peak_energy_kwh": 11.540001531693873,
+      "discomfort_degree_hours": 569.6003281867012,
+      "allergen_over_hours": 0.0,
+      "rh_over60_hours": 18.0,
+      "mean_T_in": 33.858012242553464,
+      "mean_RH": 57.37473614947166,
+      "peak_C_pol": 8.221469798992112
+    },
+    {
+      "controller": "remote_app",
+      "energy_kwh": 75.12864955597283,
+      "cost_usd": 10.551462454239333,
+      "peak_energy_kwh": 10.96839214091405,
+      "discomfort_degree_hours": 547.3333687749681,
+      "allergen_over_hours": 0.0,
+      "rh_over60_hours": 18.0,
+      "mean_T_in": 33.05115847690758,
+      "mean_RH": 57.396845658940975,
+      "peak_C_pol": 9.716347377766619
+    },
+    {
+      "controller": "nest_like",
+      "energy_kwh": 76.90050981369197,
+      "cost_usd": 10.71816687594094,
+      "peak_energy_kwh": 10.643299073232123,
+      "discomfort_degree_hours": 565.0274291191301,
+      "allergen_over_hours": 0.0,
+      "rh_over60_hours": 18.0,
+      "mean_T_in": 32.608556349183914,
+      "mean_RH": 58.36595968768332,
+      "peak_C_pol": 7.87575538572583
+    },
+    {
+      "controller": "ecobee_like",
+      "energy_kwh": 74.90329968095222,
+      "cost_usd": 10.548602525015685,
+      "peak_energy_kwh": 10.977592394155717,
+      "discomfort_degree_hours": 542.208711316182,
+      "allergen_over_hours": 0.0,
+      "rh_over60_hours": 18.0,
+      "mean_T_in": 32.80432016187896,
+      "mean_RH": 55.516420503574096,
+      "peak_C_pol": 9.757491086287528
+    },
+    {
+      "controller": "aerotherm_mpc",
+      "energy_kwh": 27.226891815310744,
+      "cost_usd": 4.022630739743759,
+      "peak_energy_kwh": 5.359264961273444,
+      "discomfort_degree_hours": 73.93555948822444,
+      "allergen_over_hours": 0.0,
+      "rh_over60_hours": 2.0,
+      "mean_T_in": 26.502509292597033,
+      "mean_RH": 43.732764787034895,
+      "peak_C_pol": 4.799381415827456
+    }
+  ]
+}

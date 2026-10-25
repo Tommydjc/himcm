@@ -1,0 +1,97 @@
+% Non-technical homeowner advisory (~1.5 pages).
+% Compile: pdflatex homeowner_advisory_letter.tex
+% Style: clear public prose; short sentences; no equations.
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{setspace}
+\pagestyle{empty}
+\setstretch{1.12}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Smart Climate Control: How Predictive Pre-Cooling\\
+Lowers Your Electric Bill Without Sacrificing Comfort}\\[0.6em]
+{\small A practical note for homeowners \quad Team GoHiMCM \quad HiMCM 2018 Problem B}
+\end{center}
+
+\vspace{0.8em}
+\noindent
+Dear Homeowner,
+
+\medskip
+\noindent
+Afternoon power is often the most expensive power of the day.
+Many homes still cool only when the room already feels hot.
+That habit pushes your compressor into the high-price window.
+It also makes the unit start and stop many times.
+
+\medskip
+\noindent
+Our student team studied a simple idea.
+Cool the house a little earlier.
+Let the walls hold that cool air.
+Then ease the cooling when rates jump.
+We call this predictive pre-cooling.
+In our locked summer-day test, the predictive controller cut the bill by about
+\textbf{4\%} and cut peak-period cooling energy by about \textbf{16\%}.
+Compressor starts fell from \textbf{42} to \textbf{3} on that day.
+
+\medskip
+\noindent
+You do not need a research lab to use the same logic.
+Use these three household rules.
+
+\medskip
+\noindent\textbf{Rule 1 --- Pre-cool two hours before the weekday peak.}
+If peak rates begin near 14:00, start a deeper cool near 12:00.
+Aim for a slightly cooler house before the expensive window.
+The walls then act like a thermal battery.
+You buy more cooling when power is cheaper.
+
+\medskip
+\noindent\textbf{Rule 2 --- Raise the setpoint about $1.5^\circ\mathrm{C}$ from 14:00 to 19:00.}
+During the peak window, let the house drift warmer by a small amount.
+A brief rise toward the mid-$20^\circ\mathrm{C}$ range is often tolerable.
+Your walls release stored coolth.
+The compressor works less when each kilowatt-hour costs more.
+In our family negotiation test, elders kept a floor near $21.5^\circ\mathrm{C}$.
+Parents accepted a short float near $25^\circ\mathrm{C}$ on peak.
+Comfort stayed the priority.
+The bill still fell.
+
+\medskip
+\noindent\textbf{Rule 3 --- Keep the outdoor unit clean so COP stays high.}
+A dirty outdoor coil forces the system to draw more electricity.
+Wash leaves and dust from the condenser on a regular schedule.
+Replace clogged filters.
+Efficient hardware multiplies every smart schedule.
+
+\medskip
+\noindent
+These rules work with many modern thermostats.
+If you own a learning thermostat, set a weekday pre-cool block.
+If you use a simple programmable unit, enter the same schedule by hand.
+If several people share the home, agree on a comfort band first.
+Protect anyone who is cold-sensitive.
+Then allow a small peak float for everyone else.
+
+\medskip
+\noindent
+Smart climate control is not about living in a cold house all day.
+It is about moving cooling into cheaper hours.
+It is about fewer short cycles.
+It is about keeping comfort while the tariff curve spikes.
+
+\medskip
+\noindent
+Sincerely,\\
+GoHiMCM AeroTherm Team
+
+\vspace{1.0em}
+{\small
+Evidence for the numeric claims above is archived in locked local simulation
+files (\texttt{bang\_vs\_mpc\_summary.json},
+\texttt{agent\_thermostat\_dialogue.json}).
+}
+
+\end{document}

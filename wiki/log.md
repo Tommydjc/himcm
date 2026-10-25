@@ -10,6 +10,18 @@ sources:
   - AGENTS.md
 ```
 
+## [2026-10-25] ingest | 2019 A 机场充电 BDI–DES
+
+只读 `2019_A_charge_des_agent/` Raw，未改 `results/*.csv`。新建：`problems/2019-a-airport-charging.md`；methods `bdi-des-airport-charging` / `pareto-kiosk-sizing` / `langgraph-des-reflection`；concept `2019-a-failure-modes`；playbook `2019-a-repro`；sources stage2 / Pareto / thunderstorm。刷新 index、synthesis、STUDIES；题型路由增模式 **H（DES / 排队基础设施）**。
+
+核对：Stage-2 12/15/2 wait=0、reneging=0；膝点 8/16/0 \$35.2k；雷暴等待 4.591→2.347（−48.9%）。
+
+## [2026-10-25] ingest | 2018 B AeroTherm Teaching 全日轨
+
+只读 `2018_B_smart_house_mpc/` Raw（含今日 Teaching Phase1–6、Harness、认知 MAS、论文四件套），未改任何 `results/*.csv`。新建：`problems/2018-b-smart-house.md`；methods `2r2c-prediction-matrix-mpc` / `black-box-climate-harness` / `cognitive-thermostat-mas`；concept `2018-b-dual-track`；playbook `2018-b-teaching-repro`；sources `2018-bang-vs-mpc` / `2018-harness-benchmark` / `2018-agent-thermostat`。刷新 `wiki/index.md`、`synthesis.md`、根 `STUDIES.md`；题型路由增模式 **G（建筑预测控制）**。
+
+核对：Teaching 成本 −4.2%、峰电 −15.8%、启停 42→3、峰占比 43.2%；Harness 均值 \(M_1\) 2.427→2.340、\(M_3\) 77.6→6.4；MAS Mock 温区 [21.5,25]、\$1.603/−4.67%。Legacy Nest−64.6% 仅附录。
+
 ## [2026-10-08] playbook | P0–P4 Agent 栈与赛时 Hub
 
 写入 Contest Hub、题型路由 A–F、跨年失败模式、Agent 栈职责、Remit/MM/Lean/证据门闩 playbook；新增 `tools/remit_bridge/`、`tools/mm_bridge/`（许可默认 BLOCKED）、`tools/evidence_check.py`；`_template/formal/` 与 `paper/notes/`、`prompts/cursor_log.md` 空壳。刷新 `wiki/index.md`、`synthesis.md`、根 `STUDIES.md`。未改任一年 `results/*.csv`。

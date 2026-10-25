@@ -9,6 +9,10 @@ status: ingested
 sources:
   - STUDIES.md
   - AGENTS.md
+  - 2018_B_smart_house_mpc/results/bang_vs_mpc_summary.json
+  - 2018_B_smart_house_mpc/results/harness_benchmark_results.csv
+  - 2019_A_charge_des_agent/results/optimal_kiosk_sizing.csv
+  - 2019_A_charge_des_agent/results/thunderstorm_stress_comparison.csv
   - 2020_A_summer_job_factor/results/entropy_weights.csv
   - 2021_A_solar_storage/results/optimal_sizing_solution.csv
   - 2022_A_honeybee_dynamics/results/orchard_pollination_recommendation.csv
@@ -37,6 +41,20 @@ sources:
 - [2022 A Honeybee](problems/2022-a-honeybee.md) — 短页；细表 [2022-a-honeybee-dynamics](problems/2022-a-honeybee-dynamics.md)
 - [2021 A Solar storage](problems/2021-a-solar-storage.md) — MCMC 负荷 + MILP + CrewAI DSR
 - [2020 A Summer job](problems/2020-a-summer-job.md) — EFA + LLMFactor + 熵权 + K-Means + LOOCV（SYNTHETIC_FALLBACK）
+- [2019 A Airport charging](problems/2019-a-airport-charging.md) — BDI–DES + Pareto 亭选 + LangGraph 反思（膝点 8/16/0）
+- [2018 B Smart House](problems/2018-b-smart-house.md) — 2R2C + 预测矩阵 MPC + Harness + 认知 MAS（Teaching/Legacy 双轨）
+
+## 方法（2019）
+
+- [BDI–DES 机场充电](methods/bdi-des-airport-charging.md)
+- [Pareto 亭选](methods/pareto-kiosk-sizing.md)
+- [LangGraph DES 反思](methods/langgraph-des-reflection.md)
+
+## 方法（2018）
+
+- [2R2C 预测矩阵 MPC](methods/2r2c-prediction-matrix-mpc.md)
+- [黑盒气候 Harness](methods/black-box-climate-harness.md)
+- [认知温控 MAS](methods/cognitive-thermostat-mas.md)
 
 ## 方法（跨年新页）
 
@@ -78,6 +96,8 @@ sources:
 - [2023 失败模式](concepts/2023-a-failure-modes.md)
 - [2024 失败模式](concepts/2024-a-failure-modes.md)
 - [COMAP AI 披露](concepts/comap-ai-disclosure.md)
+- [2018 B 双轨 Teaching/Legacy](concepts/2018-b-dual-track.md)
+- [2019 A 失败模式](concepts/2019-a-failure-modes.md)
 
 ## Playbook
 
@@ -97,6 +117,20 @@ sources:
 - [2024 研究闭环](playbooks/2024-a-study-loop.md)
 - [2024 复现命令](playbooks/2024-repro-eval.md)
 - [CSV 到图](playbooks/results-to-figures.md)
+- [2018 B Teaching 复现](playbooks/2018-b-teaching-repro.md)
+- [2019 A 复现](playbooks/2019-a-repro.md)
+
+## Source（2019）
+
+- [stage2_baseline](sources/2019-stage2-baseline.md)
+- [pareto_sizing](sources/2019-pareto-sizing.md)
+- [thunderstorm_stress](sources/2019-thunderstorm-stress.md)
+
+## Source（2018）
+
+- [bang_vs_mpc](sources/2018-bang-vs-mpc.md)
+- [harness_benchmark](sources/2018-harness-benchmark.md)
+- [agent_thermostat](sources/2018-agent-thermostat.md)
 
 ## Source（2020）
 
@@ -157,4 +191,6 @@ sources:
 - [2022 问题](problems/2022-a-honeybee.md)
 - [2021 问题](problems/2021-a-solar-storage.md)
 - [2020 问题](problems/2020-a-summer-job.md)
+- [2019 问题](problems/2019-a-airport-charging.md)
+- [2018 问题](problems/2018-b-smart-house.md)
 - [synthesis](synthesis.md)

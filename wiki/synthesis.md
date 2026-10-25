@@ -14,8 +14,20 @@ sources:
   - 2023_A_dandelion_prisms/results/monthly_metrics.csv
   - 2024_A_olympic_sde/results/brisbane_2032_ranking.csv
   - 2025_A_evacuation/results/experiment_summary.csv
+  - 2018_B_smart_house_mpc/results/bang_vs_mpc_summary.json
+  - 2018_B_smart_house_mpc/results/harness_benchmark_results.csv
+  - 2019_A_charge_des_agent/results/optimal_kiosk_sizing.csv
+  - 2019_A_charge_des_agent/results/thunderstorm_stress_comparison.csv
   - AGENTS.md
 ```
+
+## 离散事件 / 机场充电基础设施
+
+2019 A：BDI 旅客 + SimPy 三池 DES + CapEx–Wait Pareto；雷暴压力对照；LangGraph/Ollama 反思为加分。入口：[2019 问题](problems/2019-a-airport-charging.md)、[BDI–DES](methods/bdi-des-airport-charging.md)、[Pareto](methods/pareto-kiosk-sizing.md)。锚点：膝点 **8/16/0**、\$35.2k；雷暴等待 −48.9%。禁把 planning 高弃排探索点当运营终裁。
+
+## 建筑预测控制 / TOU 预冷
+
+2018 B Teaching：2R2C 热核 + ISO PMV + TOU v2，Bang-Bang 暴露峰段浪费，预测矩阵 MPC 做预冷移峰；Harness A–E 黑盒跑分；认知 MAS（Ollama/Mock）改舒适带。入口：[2018 问题](problems/2018-b-smart-house.md)、[MPC](methods/2r2c-prediction-matrix-mpc.md)、[Harness](methods/black-box-climate-harness.md)、[MAS](methods/cognitive-thermostat-mas.md)、[双轨](concepts/2018-b-dual-track.md)。锚点：成本 −4.2%、峰电 −15.8%、启停 42→3；禁止与 Legacy Nest−64.6% 混表。
 
 ## 生态动力学 / 授粉运筹
 
@@ -51,6 +63,8 @@ sources:
 
 - [Contest Hub](playbooks/contest-hub.md)
 - [目录](index.md)
+- [2019 问题](problems/2019-a-airport-charging.md)
+- [2018 问题](problems/2018-b-smart-house.md)
 - [2025 问题](problems/2025-a-evacuation.md)
 - [2024 问题](problems/2024-a-olympics.md)
 - [2023 问题](problems/2023-a-dandelion.md)

@@ -1,0 +1,29 @@
+# HiMCM 2018 Problem B — Cozy Smart House (Cursor Rules)
+
+You are a building-physics, MPC, and Python architecture mentor for
+`2018_B_smart_house_mpc/`.
+
+### 1. Locked design rationale (do not violate)
+1. Multi-physics: temperature + humidity + allergens/PM2.5 ODEs (not T-only).
+2. 2R2C thermal inertia is virtual storage for TOU pre-cool / peak shedding.
+3. Irregular arrival uses ETA + lead-time τ_lead (not ARIMA-only schedules).
+4. Multi-occupant conflict uses Nash / MAS bargaining (not arithmetic mean).
+5. Requirement 3 deliverable is a 1-page AP-style News Release (not a letter).
+
+### 2. Code rules
+- Python 3.10+, Type Hints + Docstrings on public functions/classes.
+- Never emit `# ... existing code ...` placeholders.
+- Prefer NumPy, SciPy, Pandas, Matplotlib. Optional: local Ollama for MAS.
+- Module layers stay decoupled: physics ← baselines/MPC ← harness ← scripts.
+- Forbidden: inventing KPI numbers for paper tables; always read `results/*.csv`.
+
+### 3. Writing (≈80% ASD-STE100)
+- Descriptive/analytic sentences ≤ 25 words; one fact per sentence.
+- Ban: delve into, pivotal, testament, tapestry, multifaceted, plethora,
+  it is worth noting that.
+- Fixed glossary: "AeroTherm-MPC", "2R2C thermal network",
+  "pre-conditioning lead time", "Nash social discomfort",
+  "discomfort degree-hours", "inhabitant agent", "HVAC power".
+
+### 4. COMAP log
+Append every key model/algorithm interaction to `prompts/cursor_log.md`.

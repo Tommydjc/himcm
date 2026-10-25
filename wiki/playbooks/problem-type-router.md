@@ -28,6 +28,8 @@ sources:
 | **D** | 动力学 + 灵敏度 | 种群/状态随时间、参数影响 | ODE/可微仿真 → 基线轨迹 → 弹性/分岔 | 下游运筹（密度、配额） | 2022；[DFM](../methods/dfm-torch-sim.md)、[Autograd](../methods/autograd-elasticity.md) |
 | **E** | 空间机理 / 扩散 | 传播、覆盖、格子/连续空间 | 核/PDE/CA → 情景对照 → 影响因子 | 管理帕累托、可选 RL | 2023；[WALD](../methods/wald-plume.md)、[Lefkovitch](../methods/lefkovitch-self-thinning.md) |
 | **F** | 图搜救 / 仿真 MDP | 清扫、路径、多智能体、清场时间 | 环境图 → 规划器基线 \(t_{\mathrm{clear}}\) | RL（须与基线分表） | 2025；[2025 问题](../problems/2025-a-evacuation.md) |
+| **G** | 建筑预测控制 / TOU | 恒温器、预冷、电价峰、舒适 | RC/2R2C → Bang 基线 → 滚动 MPC | Harness 扰动 + 认知 MAS | 2018；[2018 问题](../problems/2018-b-smart-house.md)、[MPC](../methods/2r2c-prediction-matrix-mpc.md) |
+| **H** | DES / 排队基础设施 | 服务台、弃排、到达波峰、CapEx | DES 基线 KPI → 容量网格 / Pareto | BDI 旅客 + LangGraph 反思 | 2019；[2019 问题](../problems/2019-a-airport-charging.md)、[BDI–DES](../methods/bdi-des-airport-charging.md) |
 
 ## 组合题
 
@@ -39,6 +41,8 @@ sources:
 | 动力学 + 管理 | D | 运筹 | 轨迹宇宙与 OR 表分列 |
 | 空间入侵 + 管理 | E | 帕累托 | 情景气候 ≠ 观测 |
 | 仿真 + 智能策略 | F | RL | 规划器 CSV 先于训练 return |
+| 热核 + 电价 + 议价 | G | C / 多智能体 | Teaching 与 Legacy 分轨；禁混 Nest% |
+| 排队 + 预算选型 | H | C | 弃排过滤后再取膝点；LLM 规划≠终裁 |
 
 ## 输出模板（开题粘贴）
 

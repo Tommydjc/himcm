@@ -1,0 +1,73 @@
+% One-page Summary Sheet. Numbers from locked results/ only.
+% Compile: pdflatex summary_sheet.tex
+% Style: ~80% ASD-STE100; <=25 words per sentence.
+\documentclass[11pt]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{booktabs,amsmath}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\Large\bfseries HiMCM 2018 Problem B --- Summary Sheet}\\[0.15em]
+{\small Team GoHiMCM \quad AeroTherm-MPC \quad
+sources: \texttt{bang\_vs\_mpc\_summary.json},
+\texttt{harness\_benchmark\_results.csv},
+\texttt{agent\_thermostat\_dialogue.json}}
+\end{center}
+\vspace{0.25em}
+
+\noindent\textbf{Background.}
+TOU electricity tariff peaks punish reactive cooling.
+Bang-Bang hysteresis short-cycles the compressor.
+We build AeroTherm-MPC on a 2R2C thermal network.
+Wall mass stores pre-cooling before peak rates.
+
+\medskip
+\noindent\textbf{Model and algorithm.}
+Envelope capacitances are $C_{\mathrm{air}}=6.2\times 10^5$ and
+$C_{\mathrm{wall}}=1.8\times 10^7\,\mathrm{J/^\circ C}$.
+COP is $3.8-0.04(T_{\mathrm{out}}-25)$.
+Comfort uses ISO 7730 PMV with penalty outside $|\mathrm{PMV}|>0.5$.
+TOU rates are $\$0.12/\$0.22/\$0.48$ (peak $14{:}00$--$19{:}00$).
+Zero-order hold at $T_s=15\,\mathrm{min}$ yields prediction matrices.
+Model predictive control (MPC) uses horizon $H=24$.
+SciPy L-BFGS-B solves each window.
+Cognitive agents may retune the comfort band via Ollama or Mock.
+
+\medskip
+\noindent\textbf{Teaching-day results (locked).}
+\begin{center}
+\scriptsize
+\begin{tabular}{lrrrrr}
+\toprule
+Controller & Energy & Cost & Peak kWh & Peak share & Starts \\
+\midrule
+Bang-Bang & 6.232 & \$1.682 & 1.514 & 43.2\% & 42 \\
+\textbf{AeroTherm-MPC} & \textbf{6.223} & \textbf{\$1.611} & \textbf{1.274} & \textbf{38.0\%} & \textbf{3} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.1em}
+Cost $-4.2\%$. On-peak energy $-15.8\%$. Starts $42\to 3$.
+Prepeak $\bar u=0.40$ vs peak $\bar u=0.17$.
+
+\medskip
+\noindent\textbf{Harness (scenarios A--E).}
+Mean $M_1$ cost is \$2.427 (Bang) vs \$2.340 (MPC).
+Mean $M_3$ mechanical score is $77.6$ vs $6.4$.
+Heatwave starts fall from $130$ to $7$.
+Sensor-noise starts fall from $133$ to $16$.
+
+\medskip
+\noindent\textbf{Cognitive MAS.}
+Consensus band is $[21.5,25.0]^\circ\mathrm{C}$ with $\lambda$ scale $1.25$.
+MAS-tuned MPC cost is \$1.603 ($-4.67\%$ vs Bang).
+Starts fall to $2$. Source in the locked file is Mock fallback.
+
+\medskip
+\noindent\textbf{Impact.}
+Predictive pre-cooling shifts cooling off the TOU spike.
+Homeowners can raise the afternoon setpoint by about $1.5^\circ\mathrm{C}$.
+See the homeowner advisory letter for three household rules.
+
+\end{document}

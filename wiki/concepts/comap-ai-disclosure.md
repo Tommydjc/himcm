@@ -12,8 +12,20 @@ sources:
   - 2023_A_dandelion_prisms/prompts/cursor_log.md
   - 2024_A_olympic_sde/prompts/cursor_log.md
   - 2025_A_evacuation/prompts/cursor_log.md
+  - 2018_B_smart_house_mpc/prompts/cursor_log.md
+  - 2018_B_smart_house_mpc/paper/ai_disclosure.tex
+  - 2019_A_charge_des_agent/prompts/cursor_log.md
+  - 2019_A_charge_des_agent/paper/ai_disclosure.tex
   - AGENTS.md
 ```
+
+## 2018 B
+
+底稿：`2018_B_smart_house_mpc/prompts/cursor_log.md`；论文披露：`paper/ai_disclosure.tex`。记录 Teaching 2R2C/MPC、Harness、认知 MAS（Ollama→Mock）、LaTeX 四件套。锁定对话为 Mock；数值只认 `results/`。
+
+## 2019 A
+
+底稿：`2019_A_charge_des_agent/prompts/cursor_log.md`；论文披露：`paper/ai_disclosure.tex`。记录 BDI–DES、Pareto、FastMCP、LangGraph/Ollama 反思与规划。运营数字只认 CSV 膝点，不以 LLM 规划摘要覆盖。
 
 ## 2022 A
 
@@ -33,6 +45,10 @@ sources:
 
 ## Related
 
+- [2018 问题](../problems/2018-b-smart-house.md)
+- [2019 问题](../problems/2019-a-airport-charging.md)
+- [认知 MAS](../methods/cognitive-thermostat-mas.md)
+- [LangGraph 反思](../methods/langgraph-des-reflection.md)
 - [2022 问题](../problems/2022-a-honeybee-dynamics.md)
 - [2023 问题](../problems/2023-a-dandelion-prisms.md)
 - [2024 问题](../problems/2024-a-olympic-sde.md)

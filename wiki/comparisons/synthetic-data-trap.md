@@ -11,6 +11,7 @@ sources:
   - 2020_A_summer_job_factor/data/raw/OriginalData.csv
   - 2020_A_summer_job_factor/results/model_comparison_metrics.csv
   - 2024_A_olympic_sde/results/historical_ranking.csv
+  - 2018_B_smart_house_mpc/data/raw/weather_summer_day_1min.csv
 ```
 
 ## 对照
@@ -21,6 +22,7 @@ sources:
 | 2020 GitHub 7 列 | 400 行竞赛镜像，不是 15 项 | 可作对照，不可与 15 项混表 |
 | BLS / O*NET | 职业统计，不是学生问卷 | 可作岗位特征，不可当 KMO 样本 |
 | 2024 九行历史 | 真回测表 | 可以，但 N=6 LOOCV 弱 |
+| 2018 Teaching 天气 | 文档化合成盛夏日（非 EPW） | 可作 Teaching 对照，须写 Limitations |
 
 ## 反模式
 
@@ -29,5 +31,6 @@ sources:
 ## Related
 
 - [2020 暑期工](../problems/2020-a-summer-job.md)
+- [2018 双轨](../concepts/2018-b-dual-track.md)
 - [EFA + LLMFactor](../methods/factor-analysis-llmfactor.md)
 - [2024 奥运](../problems/2024-a-olympics.md)

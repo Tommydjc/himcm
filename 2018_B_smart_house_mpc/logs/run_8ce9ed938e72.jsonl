@@ -1,0 +1,4 @@
+{"ts": "2026-10-25T03:13:02.872+00:00", "session_id": "8ce9ed938e72", "track": "teaching", "event": "session_start", "seq": 0, "component": "run_logger_selfcheck"}
+{"ts": "2026-10-25T03:13:02.874+00:00", "session_id": "8ce9ed938e72", "track": "teaching", "event": "run_once_teaching", "seq": 1, "note": "dry-run"}
+{"ts": "2026-10-25T03:13:02.874+00:00", "session_id": "8ce9ed938e72", "track": "teaching", "event": "mpc_step", "seq": 2, "ctrl_step": 0, "hour_of_day": 10, "u0": 0.4, "cost": 1.23, "nit": 5, "success": true, "rate_usd_per_kwh": 0.22, "T_in_C": 23.0}
+{"ts": "2026-10-25T03:13:02.875+00:00", "session_id": "8ce9ed938e72", "track": "teaching", "event": "export", "seq": 3, "paths": {"selfcheck": "/Users/tommysmac/himcm2/2018_B_smart_house_mpc/logs/run_8ce9ed938e72.jsonl"}}

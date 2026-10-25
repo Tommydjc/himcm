@@ -33,10 +33,13 @@ sources:
 13. **禁止 Agent 自动覆盖权威 CSV**：人审门闩后才 promote。
 14. **禁止省略号占位代码**：完整可运行块 + Type Hints。
 15. **禁止不披露 AI**：关键回合写入当年 `prompts/cursor_log.md`。
+16. **禁止 Teaching/Legacy 混表**（建筑控制类）：如 2018 Nest−64.6% 不得写入 Teaching Bang/MPC 主表。
+17. **禁止无弃排过滤的 DES 膝点**（排队类）：须先 reneging≤阈值再取 CapEx–Wait 膝点；LLM 规划点≠运营终裁。
 
 ## 分年细页
 
 - [2022](2022-a-failure-modes.md) · [2023](2023-a-failure-modes.md) · [2024](2024-a-failure-modes.md)
+- [2018 双轨](2018-b-dual-track.md) · [2019 失败模式](2019-a-failure-modes.md)
 - [合成数据陷阱](../comparisons/synthetic-data-trap.md) · [两套宇宙](two-universes.md)
 
 ## Related

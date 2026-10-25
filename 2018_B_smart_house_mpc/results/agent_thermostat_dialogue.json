@@ -1,0 +1,108 @@
+{
+  "bargain": {
+    "source": "mock_heuristic",
+    "context": {
+      "extreme_peak_day": true,
+      "T_out_peak_C": 38.0,
+      "peak_rate_usd_per_kwh": 0.48,
+      "peak_hours": "14:00-19:00"
+    },
+    "agents": [
+      {
+        "agent_id": "Agent_EMS",
+        "role": "Thermostat / EMS",
+        "priority": "Minimize on-peak TOU spend using wall pre-cool and peak shed.",
+        "hard_constraint": "May propose higher afternoon setpoints when rate is $0.48/kWh."
+      },
+      {
+        "agent_id": "Agent_Senior",
+        "role": "Elder inhabitant",
+        "priority": "Avoid cold drafts and deep pre-cool; fear of catching cold.",
+        "hard_constraint": "Indoor never below 21.5\u00b0C; reject aggressive pre-cool."
+      },
+      {
+        "agent_id": "Agent_Parent",
+        "role": "Eco parent / bill payer",
+        "priority": "Accept mild warmth on peak if it cuts the bill.",
+        "hard_constraint": "Allow brief float up to 25.0\u00b0C during 14:00\u201319:00."
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Agent_EMS",
+        "utterance": "Minimize on-peak TOU spend using wall pre-cool and peak shed. Hard rule: May propose higher afternoon setpoints when rate is $0.48/kWh."
+      },
+      {
+        "speaker": "Agent_Senior",
+        "utterance": "Avoid cold drafts and deep pre-cool; fear of catching cold. Hard rule: Indoor never below 21.5\u00b0C; reject aggressive pre-cool."
+      },
+      {
+        "speaker": "Agent_Parent",
+        "utterance": "Accept mild warmth on peak if it cuts the bill. Hard rule: Allow brief float up to 25.0\u00b0C during 14:00\u201319:00."
+      },
+      {
+        "speaker": "Mediator",
+        "utterance": "Mock consensus: respect elder anti-cold floor at 21.5\u00b0C; allow brief peak float to 25.0\u00b0C to cut TOU spend; comfort_weight_scale=1.25."
+      }
+    ],
+    "consensus": {
+      "agreed_temp_min": 21.5,
+      "agreed_temp_max": 25.0,
+      "comfort_weight_scale": 1.25,
+      "consensus_notes": "Mock consensus: respect elder anti-cold floor at 21.5\u00b0C; allow brief peak float to 25.0\u00b0C to cut TOU spend; comfort_weight_scale=1.25."
+    },
+    "comfort_config": {
+      "T_set_C": 23.25,
+      "T_precool_C": 21.5,
+      "T_peak_C": 25.0,
+      "T_min_C": 21.5,
+      "T_max_C": 25.0,
+      "lambda_comf": 0.0625
+    }
+  },
+  "bang_metrics": {
+    "controller": "bang_bang",
+    "energy_kwh": 6.231906641753022,
+    "cost_usd": 1.6817844054698372,
+    "peak_energy_kwh": 1.513550595543525,
+    "peak_cost_usd": 0.7265042858608919,
+    "peak_cost_share": 0.43198419696246954,
+    "short_cycle_starts": 42,
+    "cooling_minutes": 260,
+    "peak_cooling_minutes": 60,
+    "mean_T_in_C": 22.94728395223874,
+    "max_T_in_C": 24.166007452050376,
+    "min_T_in_C": 21.677248413690606,
+    "mean_abs_pmv": 0.5266671795955058,
+    "mean_discomfort_cost": 0.024297491634626897,
+    "T_on_C": 24.0,
+    "T_off_C": 22.0,
+    "Q_cool_max_W": 5000.0
+  },
+  "mpc_metrics": {
+    "controller": "aerotherm_mpc",
+    "energy_kwh": 6.173284442866144,
+    "cost_usd": 1.6032309241210267,
+    "peak_energy_kwh": 1.2771673747605514,
+    "peak_cost_usd": 0.6130403398850648,
+    "peak_cost_share": 0.382378065855463,
+    "short_cycle_starts": 2,
+    "cooling_minutes": 1425,
+    "peak_cooling_minutes": 285,
+    "mean_T_in_C": 23.315606041265486,
+    "max_T_in_C": 25.02209444553325,
+    "min_T_in_C": 21.490893366468043,
+    "mean_abs_pmv": 0.4509972004411191,
+    "mean_discomfort_cost": 0.035216396472503034,
+    "mean_u_peak": 0.16888460450332762,
+    "mean_u_prepeak": 0.3946403995771285,
+    "H": 24,
+    "Ts_s": 900.0
+  },
+  "comparison": {
+    "cost_savings_pct": 4.670841345259413,
+    "energy_savings_pct": 0.9406783871586888,
+    "peak_energy_savings_pct": 15.617794441690725,
+    "short_cycle_reduction": 40
+  }
+}

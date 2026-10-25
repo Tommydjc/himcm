@@ -1,0 +1,20 @@
+{
+  "controller": "aerotherm_mpc",
+  "energy_kwh": 6.223409738314103,
+  "cost_usd": 1.6114063180906912,
+  "peak_energy_kwh": 1.2744729300374011,
+  "peak_cost_usd": 0.6117470064179525,
+  "peak_cost_share": 0.37963547712956336,
+  "short_cycle_starts": 3,
+  "cooling_minutes": 1410,
+  "peak_cooling_minutes": 270,
+  "mean_T_in_C": 22.980522799811713,
+  "max_T_in_C": 24.987389955179324,
+  "min_T_in_C": 20.97802967583465,
+  "mean_abs_pmv": 0.5184639208912845,
+  "mean_discomfort_cost": 0.03684769539101541,
+  "mean_u_peak": 0.16832221085746912,
+  "mean_u_prepeak": 0.40055338006179414,
+  "H": 24,
+  "Ts_s": 900.0
+}
